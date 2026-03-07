@@ -1,5 +1,7 @@
 # From the Margins to the Mainstream
-### Book Launch Website — IWD 2026 · Women Techmakers Nsukka
+## Women Who Claimed Their Seat at the Table of Technology
+
+**Official Book Launch Website · IWD 2026 · Women Techmakers Nsukka**
 
 > *12 Contributors · 6 Chapters · Always Free*
 

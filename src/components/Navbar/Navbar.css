@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;           /* lets the open menu drop below on mobile */
+  flex-wrap: wrap; /* lets the open menu drop below on mobile */
   background-color: var(--dark-navy);
   padding: 0.875rem 1.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -48,7 +48,9 @@
   height: 2.5px;
   background-color: var(--brand-green);
   border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
   transform-origin: center;
 }
 
@@ -66,11 +68,15 @@
 
 /* ── Nav links — hidden on mobile, slide in when open ─────── */
 .navbar__links {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  background-color: var(--dark-navy);
   display: none;
   list-style: none;
   flex-direction: column;
   width: 100%;
-  padding: 0.5rem 0 1.25rem;
+  padding: 0.875rem 1.25rem;
   margin-top: 0.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -113,14 +119,6 @@
     height: 52px;
   }
 
-  .navbar__built-with {
-    font-size: 0.65rem;
-  }
-
-  .navbar__built-with strong {
-    font-size: 0.75rem;
-  }
-
   .navbar__links li a {
     font-size: 1.05rem;
   }
@@ -142,6 +140,8 @@
 
   /* Always show links inline */
   .navbar__links {
+    position: relative;
+    top: 0;
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { navLinks } from '../Data/Data';
 import './Navbar.css';
+import logo from '/assets/img/WTM_Logo_White.png';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <a href="/" className="navbar__logo">
-        <img src="/assets/img/WTM_Logo_White.png" alt="Women Techmakers" />
+        <img src={logo} alt="Women Techmakers" />
       </a>
 
       <button

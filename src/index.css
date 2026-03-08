@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root {
+  font-family: 'Bebas Neue', 'DM Sans', 'Playfair Display';
+
+  --dark-navy: #0f1e8a;
+  --primary-blue: #1a35c5;
+  --brand-green: #00d48a;
+  --light-green: #c8f7e8;
+  --light-blue: #e8ecfa;
+  --off-white: #f7f8fd;
+  --dark-text: #0d1a3a;
+  --mid-text: #3a4a6a;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,161 @@
+/* ============================================================
+   NAVBAR — Mobile first  (base styles target < 768px)
+   ============================================================ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;           /* lets the open menu drop below on mobile */
+  background-color: var(--dark-navy);
+  padding: 0.875rem 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Logo area ────────────────────────────────────────────── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar__logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* ── Hamburger button — shown on mobile ───────────────────── */
+.navbar__hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--brand-green);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animate to × when open */
+.navbar__hamburger--open span:nth-child(1) {
+  transform: translateY(8.75px) rotate(45deg);
+}
+.navbar__hamburger--open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.navbar__hamburger--open span:nth-child(3) {
+  transform: translateY(-8.75px) rotate(-45deg);
+}
+
+/* ── Nav links — hidden on mobile, slide in when open ─────── */
+.navbar__links {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5rem 0 1.25rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar__links--open {
+  display: flex;
+}
+
+.navbar__links li a {
+  display: block;
+  padding: 0.75rem 0;
+  color: var(--off-white);
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: color 0.2s ease;
+}
+
+.navbar__links li:last-child a {
+  border-bottom: none;
+}
+
+.navbar__links li a:hover,
+.navbar__links li a:focus-visible {
+  color: var(--brand-green);
+  outline: none;
+}
+
+/* ============================================================
+   Tablet — 768px and up
+   ============================================================ */
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .navbar__logo img {
+    height: 52px;
+  }
+
+  .navbar__built-with {
+    font-size: 0.65rem;
+  }
+
+  .navbar__built-with strong {
+    font-size: 0.75rem;
+  }
+
+  .navbar__links li a {
+    font-size: 1.05rem;
+  }
+}
+
+/* ============================================================
+   Desktop — 1024px and up
+   ============================================================ */
+@media screen and (min-width: 1024px) {
+  .navbar {
+    padding: 1.125rem 4rem;
+    flex-wrap: nowrap;
+  }
+
+  /* Hide hamburger — not needed on desktop */
+  .navbar__hamburger {
+    display: none;
+  }
+
+  /* Always show links inline */
+  .navbar__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    width: auto;
+    padding: 0;
+    margin-top: 0;
+    border-top: none;
+  }
+
+  .navbar__links li a {
+    padding: 0;
+    border-bottom: none;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+}

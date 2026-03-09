@@ -60,7 +60,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="hero__ctas">
           <a
-            href="https://luma.com/5vppqueh"
+            href="/"
             className="hero__cta hero__cta--primary"
             target="_blank"
             rel="noopener noreferrer"
@@ -72,7 +72,7 @@ export default function Hero() {
               aria-hidden="true"
             />
           </a>
-          <a href="/about" className="hero__cta hero__cta--secondary">
+          <a href="/" className="hero__cta hero__cta--secondary">
             Learn More
             <img
               src="/assets/icons/vector-cta-sec.svg"

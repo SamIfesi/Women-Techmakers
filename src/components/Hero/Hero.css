@@ -32,7 +32,6 @@
   gap: 0.5rem;
   background-color: var(--brand-green);
   color: var(--dark-text);
-  font-family: 'DM Sans', sans-serif;
   font-size: 0.7rem;
   border-radius: 2rem;
   padding: 0.65rem 1rem;
@@ -50,17 +49,18 @@
   flex-direction: column;
   align-items: center;        /* centered on mobile */
   text-align: center;
-  gap: 1.5rem;
+  gap: .5rem;
   width: 100%;
 }
 
 /* ── Title ──────────────────────────────────────────────────── */
 .hero__title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3.75rem, 14vw, 5.5rem);
-  line-height: 0.97;
+  font-family: var(--font-coolvetica);
+  font-size: clamp(1.5rem, 11vw, 3.5rem);
+  font-weight: 500;
+  line-height: .9;
   color: var(--off-white);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .hero__title--green {
@@ -69,7 +69,6 @@
 
 /* ── Subtitle ───────────────────────────────────────────────── */
 .hero__subtitle {
-  font-family: 'DM Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: var(--off-white);
@@ -78,12 +77,13 @@
   margin: 0;
 }
 
-/* ── Stats row ──────────────────────────────────────────────── */
+/* ── Stats row ── */
 .hero__stats {
   display: flex;
   align-items: stretch;
   justify-content: center;
   width: 100%;
+  margin: 1.3rem 0;
 }
 
 .hero__stat {
@@ -107,7 +107,6 @@
 }
 
 .hero__stat-number {
-  font-family: 'DM Sans', sans-serif;
   font-size: clamp(2rem, 8vw, 2.5rem);
   font-weight: 800;
   color: var(--off-white);
@@ -115,9 +114,8 @@
 }
 
 .hero__stat-label {
-  font-family: 'DM Sans', sans-serif;
   font-size: 0.78rem;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--off-white);
 }
 
@@ -144,7 +142,6 @@
   gap: 0.5rem;
   padding: 0.9rem 0.75rem;
   border-radius: 10px;
-  font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;

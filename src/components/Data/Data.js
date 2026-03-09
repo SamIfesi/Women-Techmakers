@@ -7,7 +7,7 @@ export const navLinks = [
 
 export const aboutSec = {
   title: 'About The Book',
-  quote: '…they were told the room was full.',
+  quote: '...they were told the room was full.',
   quote2: 'They walked in anyway....',
   text: 'From the Margins to the Mainstream is a collection of true stories — told by women who navigated bias, made radical career pivots, built businesses from nothing, mentored the next generation, and rose to lead in technology.',
   text2:
@@ -97,3 +97,31 @@ export const contributorsData = {
   ],
 };
 
+ export const eventsData = {
+  section: {
+    title: 'Two Events, One March To Remember',
+    description:
+      'The book launches at our IWD event in Nsukka, but you can join us online first',
+  },
+  events: [
+    {
+      title: 'Pre-Event Webinar',
+      type: 'Virtual Session',
+      speakers: '3 Speakers',
+      panelists: '3 Panelists',
+      date: '9th March 2026',
+      time: '7:00PM GMT+1',
+      registerLink: '#',
+      image: null,
+    },
+    {
+      title: 'Main IWD Event & Book Launch',
+      type: 'Physical Session',
+      location: 'Nsukka, Nigeria',
+      date: '28th March 2026',
+      time: '10:00AM GMT+1',
+      registerLink: '#',
+      image: null,
+    },
+  ],
+};

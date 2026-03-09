@@ -111,8 +111,8 @@ export const contributorsData = {
       panelists: '3 Panelists',
       date: '9th March 2026',
       time: '7:00PM GMT+1',
-      registerLink: '#',
-      image: null,
+      link: '#',
+      image: '/assets/img/flyer-1.png',
     },
     {
       title: 'Main IWD Event & Book Launch',
@@ -120,8 +120,8 @@ export const contributorsData = {
       location: 'Nsukka, Nigeria',
       date: '28th March 2026',
       time: '10:00AM GMT+1',
-      registerLink: '#',
-      image: null,
+      link: '#',
+      image: '/assets/img/flyer-2.png',
     },
   ],
 };

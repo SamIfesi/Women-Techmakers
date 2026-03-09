@@ -1,0 +1,110 @@
+/* ============================================================
+   EVENTS SECTION — Mobile first
+   ============================================================ */
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  background-image: url('/assets/img/cover.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* Solid blue tint over the photo */
+.events::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(26, 52, 197, 0.8);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.events__banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  overflow: hidden;
+}
+.events__title,
+.events__description {
+  position: relative;
+  z-index: 2;
+}
+
+.events__title {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 800;
+  color: var(--off-white);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+}
+
+.events__description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--off-white);
+  line-height: 1.65;
+  max-width: 34ch;
+}
+
+/* ── Cards container — pulled up over the banner bottom ─────── */
+.events__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 1rem; 
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Tablet ───────────────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .events__banner {
+    padding: 5rem 2.5rem 6rem;
+  }
+
+  .events__title {
+    font-size: clamp(2.75rem, 6vw, 4rem);
+  }
+
+  .events__description {
+    font-size: 1.1rem;
+    max-width: 40ch;
+  }
+
+  .events__cards {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0 2.5rem 4.5rem;
+    margin-top: -3rem;
+    gap: 1.5rem;
+  }
+
+  .events__cards > * {
+    flex: 1;
+  }
+}
+
+/* ── Desktop ──────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) {
+  .events__banner {
+    padding: 6rem 4rem 7rem;
+  }
+
+  .events__cards {
+    padding: 0 4rem 5.5rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin-inline: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

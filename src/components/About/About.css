@@ -1,0 +1,133 @@
+/* ============================================================
+   ABOUT SECTION — Mobile first  (base styles target < 768px)
+   ============================================================ */
+
+.about {
+  background-color: var(--off-white);
+  padding: 2.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Section heading with decorative lines ──────────────────── */
+.about__heading-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.about__heading-line {
+  flex: 1;
+  height: 1.5px;
+  background-color: var(--dark-navy);
+  display: block;
+}
+
+.about__heading {
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  font-weight: 800;
+  color: var(--dark-navy);
+  white-space: nowrap;
+  letter-spacing: -0.015em;
+}
+
+/* ── Body: quote + text stacked on mobile ───────────────────── */
+.about__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ── Pull quote ─────────────────────────────────────────────── */
+.about__quote {
+  border: 2px solid var(--dark-navy);
+  border-radius: 2rem;
+  padding: 1.5rem 1.25rem;
+}
+
+.about__quote p {
+  font-family: var(--font-coolvetica);
+  font-size: clamp(1.25rem, 8vw, 3rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--dark-text);
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* ── Body text ──────────────────────────────────────────────── */
+.about__text {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+  text-align: center;
+}
+
+.about__text p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--dark-text);
+  line-height: 1.75;
+}
+
+/* ============================================================
+   Tablet — 768px and up
+   ============================================================ */
+@media screen and (min-width: 768px) {
+  .about {
+    padding: 4.5rem 2.5rem;
+    gap: 3rem;
+  }
+
+  .about__heading {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+  }
+
+  .about__quote {
+    padding: 2rem 1.75rem;
+    border-radius: 16px;
+  }
+
+  .about__quote p {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+  }
+
+  .about__text p {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   Desktop — 1024px and up
+   ============================================================ */
+@media screen and (min-width: 1024px) {
+  .about {
+    padding: 5.5rem 4rem;
+    gap: 3.5rem;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  /* Side-by-side: quote on the left, text on the right */
+  .about__body {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .about__quote {
+    flex: 0 0 42%;
+    padding: 2.25rem 2rem;
+  }
+
+  .about__text {
+    flex: 1;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .about__text p {
+    font-size: 1.05rem;
+  }
+}

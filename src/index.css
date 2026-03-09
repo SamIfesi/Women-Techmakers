@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 :root {
-  font-family: 'Bebas Neue', 'DM Sans', 'Playfair Display';
+  --font-coolvetica: 'Coolvetica', sans-serif;
+  --font-fractul: 'Fractul', sans-serif;
 
   --dark-navy: #0f1e8a;
   --primary-blue: #1a35c5;
@@ -19,4 +19,155 @@
   margin: 0;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+}
+/* ── Coolvetica ── */
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/assets/fonts/Coolvetica/Coolvetica%20Rg.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/assets/fonts/Coolvetica/Coolvetica%20Rg%20It.otf')
+    format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/assets/fonts/Coolvetica/Coolvetica%20Rg%20Cond.otf')
+    format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/assets/fonts/Coolvetica/Coolvetica%20Rg%20Cram.otf')
+    format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: extra-condensed;
+}
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/assets/fonts/Coolvetica/Coolvetica%20Hv%20Comp.otf')
+    format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+/* ── Fractul ── */
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-Hairline.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-HairlineItalic.ttf')
+    format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-Thin.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-ThinItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-SemiBoldItalic.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-ExtraBoldItalic.ttf')
+    format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fractul';
+  src: url('/assets/fonts/fractul/Fractul-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
 }

@@ -1,0 +1,72 @@
+/* ============================================================
+   CHAPTER CARD — Mobile first
+   ============================================================ */
+
+.chapter-card {
+  background-color: var(--off-white);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Large watermark number */
+.chapter-card__watermark {
+  font-family: var(--font-coolvetica);
+  font-size: clamp(4rem, 14vw, 6rem);
+  font-weight: 900;
+  color: var(--light-blue);
+  text-align: right;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: 0.04em;
+}
+
+.chapter-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.chapter-card__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--mid-text);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.chapter-card__title {
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.chapter-card__description {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--dark-text);
+  line-height: 1.7;
+  margin: 0.5rem 0 0;
+}
+
+/* ── Tablet ───────────────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .chapter-card {
+    padding: 2rem 1.75rem 2.25rem;
+  }
+
+  .chapter-card__title {
+    font-size: 1.75rem;
+  }
+
+  .chapter-card__description {
+    font-size: 1rem;
+  }
+}

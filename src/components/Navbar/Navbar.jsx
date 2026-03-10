@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from "react-router";
 import { navLinks } from '../Data/Data';
 import './Navbar.css';
 import logo from '/assets/img/WTM_Logo_White.png';
@@ -8,9 +9,9 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="/" className="navbar__logo">
+      <NavLink to="/" className="navbar__logo">
         <img src={logo} alt="Women Techmakers" />
-      </a>
+      </NavLink>
 
       <button
         className={`navbar__hamburger${menuOpen ? ' navbar__hamburger--open' : ''}`}
@@ -30,10 +31,10 @@ export default function Navbar() {
         role="list"
       >
         {navLinks.map((link) => (
-          <li key={link.path}>
-            <a href={link.path} onClick={() => setMenuOpen(false)}>
+          <li key={link.path} >
+            <NavLink to={link.path} className={({isActive})=> isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>
               {link.label}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>

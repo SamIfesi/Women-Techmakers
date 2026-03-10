@@ -14,7 +14,6 @@
 
 /* ── Eyebrow ───────────────────────────────────────────────── */
 .about-hero__eyebrow {
-  font-family: var(--font-fractul);
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--brand-green);
@@ -24,9 +23,8 @@
 
 /* ── Display title ─────────────────────────────────────────── */
 .about-hero__title {
-  font-family: var(--font-coolvetica);
-  font-size: clamp(4rem, 18vw, 7.5rem);
-  font-weight: 400;
+  font-size: clamp(4rem, 11vw, 7.5rem);
+  font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.01em;
   margin: 0;
@@ -44,7 +42,6 @@
 
 /* ── Tagline ───────────────────────────────────────────────── */
 .about-hero__tagline {
-  font-family: var(--font-fractul);
   font-size: clamp(0.95rem, 3.5vw, 1.125rem);
   font-weight: 400;
   color: #ffffff;
@@ -67,7 +64,6 @@
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  font-family: var(--font-fractul);
   font-size: 0.925rem;
   font-weight: 400;
   color: #ffffff;
@@ -89,7 +85,6 @@
   padding: 1rem 2rem;
   background-color: var(--brand-green);
   color: var(--dark-navy);
-  font-family: var(--font-fractul);
   font-size: 1rem;
   font-weight: 800;
   border-radius: 50px;

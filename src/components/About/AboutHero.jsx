@@ -52,7 +52,7 @@ export default function AboutHero() {
 
       {/* CTA */}
       <a
-        href="https://forms.gle"
+        href=""
         className="about-hero__cta"
         target="_blank"
         rel="noopener noreferrer"

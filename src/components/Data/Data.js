@@ -1,9 +1,22 @@
 export const navLinks = [
-  { label: 'About', path: '/about' },
-  { label: 'Contributors', path: '/contributors' },
-  { label: 'IWD 2026', path: '/iwd2026' },
-  { label: 'Get the Book', path: '/' },
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/About' },
+  { label: 'Contributors', path: '/Contributors' },
+  { label: 'IWD 2026', path: '/Iwd2026' },
+  { label: 'Get the Book', path: '/get-the-book' },
 ];
+
+export const breakThePattern = {
+  heading: 'Break The Pattern',
+  subheading: 'What It Means and Why It Matters Now',
+  body1:
+    'Every industry has patterns — invisible rules about who gets to lead, who gets funded, who gets heard. In technology, those patterns have historically excluded women.',
+  body1Bold: 'Break the Pattern',
+  body1End:
+    ' is a call to disrupt those norms — not with anger, but with action, stories, and community.',
+  body2:
+    'The 2026 theme connects directly to our book: both ask the same question — what happens when women refuse to stay in the margins? The event is where we answer that question together, in real time.',
+};
 
 export const aboutSec = {
   title: 'About The Book',
@@ -97,7 +110,7 @@ export const contributorsData = {
   ],
 };
 
- export const eventsData = {
+export const eventsData = {
   section: {
     title: 'Two Events, One March To Remember',
     description:
@@ -124,4 +137,100 @@ export const contributorsData = {
       image: '/assets/img/flyer-2.png',
     },
   ],
+};
+
+export const everthingPlanned = {
+  title: "What's Happening",
+  subtitle: "Everything planned for 28th March",
+  cards: [
+    {
+      icon: "/assets/icons/book.svg",
+      head: "Official Book Launch",
+      text: `Free distribution and celebration of 'From the Margins to the Mainstream'`,
+    },
+    {
+      icon: "/assets/icons/mic.svg",
+      head: "Keynote Session",
+      text: "Two keynote speakers on AI, leadership, and women rewriting their tech paths",
+    },
+    {
+      icon: "/assets/icons/panel.svg",
+      head: "Panel Discussion",
+      text: "Four women from diverse tech backgrounds — honest conversation on building and leading",
+    },
+    {
+      icon: "/assets/icons/ai.svg",
+      head: "AI Playground",
+      text: "Hands-on demo of AI tools with guided support — no prior experience needed",
+    },
+    {
+      icon: "/assets/icons/portfolio.svg",
+      head: "Portfolio Review Clinic",
+      text: "Live CV, LinkedIn, and GitHub feedback from professionals",
+    },
+    {
+      icon: "/assets/icons/collabo.svg",
+      head: "Collaboration Sprint",
+      text: "Team-based real-world challenge — build something together in under an hour",
+    },
+    {
+      icon: "/assets/icons/sparks.svg",
+      head: "Women Spotlight Ceremony",
+      text: "Recognition and celebration of women nominated and spotlighted for IWD 2026",
+    },
+    {
+      icon: "/assets/icons/message.svg",
+      head: "Roundtable Discussions",
+      text: "Small-group conversations on key themes from the book and the event",
+    },
+    {
+      icon: "/assets/icons/smily-face.svg",
+      head: "Community Networking",
+      text: "Structured sessions to connect women at similar career stages",
+    },
+    {
+      icon: "/assets/icons/camera.svg",
+      head: "Past Event Snapshots",
+      text: "Photo gallery from previous WTM Nsukka events showcasing community history",
+    },
+  ],
+};
+
+export const mainEvent = [
+  {text1: "Date", text2:"Saturday, 28th March 2026"},
+  {text1: "Venue", text2:"University of Nigeria, Nsukka"},
+  {text1: "Capacity", text2:"120 participants"},
+  {text1: "Cost", text2:"FREE"},
+];
+
+export const footerData = {
+  title: 'From The Margins\nTo The Mainstream',
+  description:
+    'A curated collection of true stories by women in technology. Published by Women Techmakers Nsukka in celebration of International Women\'s Day 2026. Free — always and forever.',
+  socials: [
+    { label: 'Instagram', icon: '/assets/icons/instagram.svg', href: '#' },
+    { label: 'Twitter', icon: '/assets/icons/twitter.svg', href: '#' },
+    { label: 'LinkedIn', icon: '/assets/icons/linkedIn.svg', href: '#' },
+  ],
+  quickLinks: {
+    heading: 'Quick Links',
+    links: [
+      { label: 'About the Book', href: '/About' },
+      { label: 'Contributors', href: '/Contributors' },
+      { label: 'IWD 2026 Event', href: '/Iwd2026' },
+      { label: 'Women Spotlight', href: '#' },
+      { label: 'Our Team', href: '#' },
+      { label: 'Partners', href: '#' },
+    ],
+  },
+  joinUs: {
+    heading: 'Join Us',
+    links: [
+      { label: 'Join our WhatsApp Community', href: '#' },
+      { label: 'Register for IWD 2026 (Free)', href: '#' },
+      { label: 'Join the Pre-Event Webinar', href: '#' },
+    ],
+  },
+  copyright: '© 2026 Women Techmakers Nsukka · Free to share · Not for resale',
+  hashtags: '#WTMIWD2026 · #BreakThePattern · #FromTheMarginsToTheMainstream',
 };

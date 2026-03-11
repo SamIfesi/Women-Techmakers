@@ -1,0 +1,71 @@
+/* ============================================================
+   REFLECTION PROMPTS SECTION — Mobile first
+   ============================================================ */
+
+.reflection-prompts {
+  background-color: var(--dark-navy);
+  padding: 4rem 1.25rem;
+}
+
+/* Section header */
+.reflection-prompts__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.reflection-prompts__heading {
+  font-family: var(--font-inter);
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin: 0 0 0.75rem;
+}
+
+.reflection-prompts__subheading {
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brand-green);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0;
+}
+
+/* Cards list */
+.reflection-prompts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* ── Tablet ───────────────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .reflection-prompts {
+    padding: 5rem 2rem;
+  }
+
+  .reflection-prompts__header {
+    margin-bottom: 3rem;
+  }
+
+  .reflection-prompts__list {
+    gap: 1.25rem;
+  }
+}
+
+/* ── Desktop ──────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) {
+  .reflection-prompts {
+    padding: 6rem 2rem;
+  }
+
+  .reflection-prompts__list {
+    max-width: 48rem;
+    gap: 1.5rem;
+  }
+}

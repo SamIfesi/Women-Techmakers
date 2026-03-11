@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 import './index.css';
 import App from './App.jsx';
 import About from './About.jsx';
+import Iwd2026 from './Iwd2026.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Iwd2026" element={<Iwd2026 />} />
       </Routes>
     </StrictMode>
   </BrowserRouter>

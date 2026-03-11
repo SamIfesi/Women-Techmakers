@@ -1,9 +1,10 @@
 import { mainEvent, webinarCard } from '../Data/Data';
 import './EventDetailCards.css';
+import lightening from '/assets/icons/web-lightening.svg';
 
 export default function EventDetailCards() {
   return (
-    <div className="edc">
+    <section className="edc">
       {/* ── Main Event Card ─────────────────────────────────── */}
       <div className="edc-main">
         <h2 className="edc-main__heading">{mainEvent.heading}</h2>
@@ -38,15 +39,15 @@ export default function EventDetailCards() {
 
       {/* ── Pre-Event Webinar Card ───────────────────────────── */}
       <div className="edc-webinar">
-        <div className="edc-webinar__badge">
-          <span className="edc-webinar__badge-icon" aria-hidden="true">
-            ⚡
-          </span>
-          <span className="edc-webinar__badge-text">{webinarCard.badge}</span>
-        </div>
+        <div>
+          <div className="edc-webinar__badge">
+            <img src={lightening} alt="" />
+            <span className="edc-webinar__badge-text">{webinarCard.badge}</span>
+          </div>
 
-        <h2 className="edc-webinar__heading">{webinarCard.title}</h2>
-        <p className="edc-webinar__subtitle">{webinarCard.subtitle}</p>
+          <h2 className="edc-webinar__heading">{webinarCard.title}</h2>
+          <p className="edc-webinar__subtitle">{webinarCard.subtitle}</p>
+        </div>
 
         <div className="edc-webinar__rows">
           {webinarCard.rows.map((row, i) => (
@@ -71,6 +72,6 @@ export default function EventDetailCards() {
           {webinarCard.cta.text}
         </a>
       </div>
-    </div>
+    </section>
   );
 }

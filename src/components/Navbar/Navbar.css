@@ -11,17 +11,11 @@
   justify-content: space-between;
   flex-wrap: wrap; /* lets the open menu drop below on mobile */
   background-color: var(--dark-navy);
-  padding: 0.875rem 1.25rem;
+  padding: 0.875rem 1.25rem .875rem .5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* ── Logo area ────────────────────────────────────────────── */
-.navbar__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
 .navbar__logo img {
   height: 44px;
   width: auto;

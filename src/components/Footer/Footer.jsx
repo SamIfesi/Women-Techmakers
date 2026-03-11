@@ -3,7 +3,15 @@ import { footerData } from '../Data/Data';
 import './Footer.css';
 
 export default function Footer() {
-  const { title, description, socials, quickLinks, joinUs, copyright, hashtags } = footerData;
+  const {
+    title,
+    description,
+    socials,
+    quickLinks,
+    joinUs,
+    copyright,
+    hashtags,
+  } = footerData;
 
   return (
     <footer className="footer">
@@ -17,33 +25,43 @@ export default function Footer() {
           <p className="footer__description">{description}</p>
           <div className="footer__socials">
             {socials.map(({ label, icon, href }) => (
-              <a key={label} to={href} className="footer__social-link" aria-label={label}>
+              <a
+                key={label}
+                to={href}
+                className="footer__social-link"
+                aria-label={label}
+              >
                 <img src={icon} alt={label} />
               </a>
             ))}
           </div>
         </div>
+        <div className="footer__links-group">
+          <div className="footer__links-col">
+            <h3 className="footer__col-heading">{quickLinks.heading}</h3>
+            <ul className="footer__link-list">
+              {quickLinks.links.map(({ label, href }) => (
+                <li key={label}>
+                  <Link to={href} className="footer__link">
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <div className="footer__links-col">
-          <h3 className="footer__col-heading">{quickLinks.heading}</h3>
-          <ul className="footer__link-list">
-            {quickLinks.links.map(({ label, href }) => (
-              <li key={label}>
-                <Link to={href} className="footer__link">{label}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="footer__links-col">
-          <h3 className="footer__col-heading">{joinUs.heading}</h3>
-          <ul className="footer__link-list">
-            {joinUs.links.map(({ label, href }) => (
-              <li key={label}>
-                <a href={href} className="footer__link">{label}</a>
-              </li>
-            ))}
-          </ul>
+          <div className="footer__links-col">
+            <h3 className="footer__col-heading">{joinUs.heading}</h3>
+            <ul className="footer__link-list">
+              {joinUs.links.map(({ label, href }) => (
+                <li key={label}>
+                  <a href={href} className="footer__link">
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 

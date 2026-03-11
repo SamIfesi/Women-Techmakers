@@ -12,7 +12,8 @@
   --off-white: #f7f8fd;
   --dark-text: #0d1a3a;
   --mid-text: #3a4a6a;
-  --light-bg: #F3F6FF;
+  --light-bg: #f3f6ff;
+  --accent-orange: #f97316;
 }
 *,
 *::before,
@@ -23,7 +24,7 @@
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
-body{
+body {
   background-color: var(--light-blue);
   font-family: var(--font-fractul);
 }

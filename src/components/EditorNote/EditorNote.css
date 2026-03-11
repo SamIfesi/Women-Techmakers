@@ -1,0 +1,110 @@
+/* ============================================================
+   EDITOR'S NOTE — Mobile first  (base styles target < 768px)
+   ============================================================ */
+
+.editor-note {
+  background-color: var(--light-green);
+  padding: 3rem 1.25rem;
+}
+
+.editor-note__card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem 2rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* ── Opening quote mark ─────────────────────────────────────── */
+.editor-note__open-quote {
+  display: block;
+  font-family: var(--font-inter);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--brand-green);
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+/* ── Heading ────────────────────────────────────────────────── */
+.editor-note__heading {
+  font-family: var(--font-inter);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 1.25rem;
+}
+
+/* ── Quote body ─────────────────────────────────────────────── */
+.editor-note__quote {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark-text);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Attribution ────────────────────────────────────────────── */
+.editor-note__attribution {
+  font-family: var(--font-inter);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+/* ============================================================
+   Tablet — 768px and up
+   ============================================================ */
+@media screen and (min-width: 768px) {
+  .editor-note {
+    padding: 4rem 2.5rem;
+  }
+
+  .editor-note__card {
+    padding: 2.5rem 2.5rem;
+  }
+
+  .editor-note__open-quote {
+    font-size: 3.5rem;
+  }
+
+  .editor-note__heading {
+    font-size: 1.25rem;
+  }
+
+  .editor-note__quote {
+    font-size: 1.0625rem;
+  }
+}
+
+/* ============================================================
+   Desktop — 1024px and up
+   ============================================================ */
+@media screen and (min-width: 1024px) {
+  .editor-note {
+    padding: 5rem 2.5rem;
+  }
+
+  .editor-note__card {
+    padding: 3rem 3rem;
+  }
+
+  .editor-note__open-quote {
+    font-size: 4rem;
+  }
+
+  .editor-note__heading {
+    font-size: 1.375rem;
+  }
+
+  .editor-note__quote {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+
+  .editor-note__attribution {
+    font-size: 1rem;
+  }
+}

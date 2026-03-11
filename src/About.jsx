@@ -1,5 +1,9 @@
 import Navbar from './components/Navbar/Navbar';
-import AboutHero from './components/About/AboutHero';
+import StoryBehindBook from './components/About/StoryBehindBook';
+import EditorNote from './components/EditorNote/EditorNote';
+import WhatsInside from './components/WhatsInside/WhatsInside';
+import ReflectionPrompts from './components/ReflectionPrompts/ReflectionPrompts';
+import BookDetails from './components/BookDetails/BookDetails';
 import Footer from './components/Footer/Footer';
 
 export default function About() {
@@ -7,7 +11,11 @@ export default function About() {
     <>
       <Navbar />
       <main>
-        <AboutHero />
+        <StoryBehindBook />
+        <WhatsInside />
+        <ReflectionPrompts />
+        <EditorNote />
+        <BookDetails />
       </main>
       <Footer />
     </>

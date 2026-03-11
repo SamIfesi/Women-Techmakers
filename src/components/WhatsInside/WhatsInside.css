@@ -1,0 +1,72 @@
+/* ============================================================
+   WHAT'S INSIDE SECTION — Mobile first
+   ============================================================ */
+
+.whats-inside {
+  background-color: var(--off-white);
+  padding: 4rem 1.25rem;
+}
+
+/* Section header */
+.whats-inside__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.whats-inside__heading {
+  font-family: var(--font-inter);
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 800;
+  color: var(--dark-navy);
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
+}
+
+.whats-inside__subheading {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--mid-text);
+  margin: 0;
+}
+
+/* Card list */
+.whats-inside__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* ── Tablet ───────────────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .whats-inside {
+    padding: 5rem 2rem;
+  }
+
+  .whats-inside__header {
+    margin-bottom: 3rem;
+  }
+
+  .whats-inside__subheading {
+    font-size: 1.05rem;
+  }
+
+  .whats-inside__list {
+    gap: 1.25rem;
+  }
+}
+
+/* ── Desktop ──────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) {
+  .whats-inside {
+    padding: 6rem 2rem;
+  }
+
+  .whats-inside__list {
+    max-width: 48rem;
+    gap: 1.5rem;
+  }
+}

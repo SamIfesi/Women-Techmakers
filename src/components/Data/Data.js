@@ -2,7 +2,7 @@ export const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/About' },
   { label: 'Contributors', path: '/Contributors' },
-  { label: 'IWD 2026', path: '/Iwd2026' },
+  { label: 'IWD 2026', path: '/Iwd-2026' },
   { label: 'Get the Book', path: '/get-the-book' },
 ];
 

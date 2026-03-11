@@ -141,72 +141,89 @@ export const eventsData = {
 
 export const everthingPlanned = {
   title: "What's Happening",
-  subtitle: "Everything planned for 28th March",
+  subtitle: 'Everything planned for 28th March',
   cards: [
     {
-      icon: "/assets/icons/book.svg",
-      head: "Official Book Launch",
+      icon: '/assets/icons/book.svg',
+      head: 'Official Book Launch',
       text: `Free distribution and celebration of 'From the Margins to the Mainstream'`,
     },
     {
-      icon: "/assets/icons/mic.svg",
-      head: "Keynote Session",
-      text: "Two keynote speakers on AI, leadership, and women rewriting their tech paths",
+      icon: '/assets/icons/mic.svg',
+      head: 'Keynote Session',
+      text: 'Two keynote speakers on AI, leadership, and women rewriting their tech paths',
     },
     {
-      icon: "/assets/icons/panel.svg",
-      head: "Panel Discussion",
-      text: "Four women from diverse tech backgrounds — honest conversation on building and leading",
+      icon: '/assets/icons/panel.svg',
+      head: 'Panel Discussion',
+      text: 'Four women from diverse tech backgrounds — honest conversation on building and leading',
     },
     {
-      icon: "/assets/icons/ai.svg",
-      head: "AI Playground",
-      text: "Hands-on demo of AI tools with guided support — no prior experience needed",
+      icon: '/assets/icons/ai.svg',
+      head: 'AI Playground',
+      text: 'Hands-on demo of AI tools with guided support — no prior experience needed',
     },
     {
-      icon: "/assets/icons/portfolio.svg",
-      head: "Portfolio Review Clinic",
-      text: "Live CV, LinkedIn, and GitHub feedback from professionals",
+      icon: '/assets/icons/portfolio.svg',
+      head: 'Portfolio Review Clinic',
+      text: 'Live CV, LinkedIn, and GitHub feedback from professionals',
     },
     {
-      icon: "/assets/icons/collabo.svg",
-      head: "Collaboration Sprint",
-      text: "Team-based real-world challenge — build something together in under an hour",
+      icon: '/assets/icons/collabo.svg',
+      head: 'Collaboration Sprint',
+      text: 'Team-based real-world challenge — build something together in under an hour',
     },
     {
-      icon: "/assets/icons/sparks.svg",
-      head: "Women Spotlight Ceremony",
-      text: "Recognition and celebration of women nominated and spotlighted for IWD 2026",
+      icon: '/assets/icons/sparks.svg',
+      head: 'Women Spotlight Ceremony',
+      text: 'Recognition and celebration of women nominated and spotlighted for IWD 2026',
     },
     {
-      icon: "/assets/icons/message.svg",
-      head: "Roundtable Discussions",
-      text: "Small-group conversations on key themes from the book and the event",
+      icon: '/assets/icons/message.svg',
+      head: 'Roundtable Discussions',
+      text: 'Small-group conversations on key themes from the book and the event',
     },
     {
-      icon: "/assets/icons/smily-face.svg",
-      head: "Community Networking",
-      text: "Structured sessions to connect women at similar career stages",
+      icon: '/assets/icons/smily-face.svg',
+      head: 'Community Networking',
+      text: 'Structured sessions to connect women at similar career stages',
     },
     {
-      icon: "/assets/icons/camera.svg",
-      head: "Past Event Snapshots",
-      text: "Photo gallery from previous WTM Nsukka events showcasing community history",
+      icon: '/assets/icons/camera.svg',
+      head: 'Past Event Snapshots',
+      text: 'Photo gallery from previous WTM Nsukka events showcasing community history',
     },
   ],
 };
 
-export const mainEvent = [
-  {text1: "Date", text2:"Saturday, 28th March 2026"},
-  {text1: "Venue", text2:"University of Nigeria, Nsukka"},
-  {text1: "Capacity", text2:"120 participants"},
-  {text1: "Cost", text2:"FREE"},
-];
+export const mainEvent = {
+  heading: 'MAIN EVENT',
+  rows: [
+    { label: 'Date', value: 'Saturday, 28th March 2026' },
+    { label: 'Venue', value: 'University of Nigeria, Nsukka' },
+    { label: 'Capacity', value: '120 participants' },
+    { label: 'Cost', value: 'FREE', highlight: true },
+  ],
+  cta: { text: 'Register Now — Free', link: '#' },
+};
+
+export const webinarCard = {
+  badge: 'PRE-EVENT WEBINAR',
+  title: 'Break The Pattern',
+  subtitle: 'Rewriting How Women Build, Collaborate and Lead in Tech',
+  rows: [
+    { label: 'Date', value: '9th March 2026' },
+    { label: 'Time', value: '6PM WAT' },
+    { label: 'Platform', value: 'Online' },
+    { label: 'Cost', value: 'FREE' },
+  ],
+  cta: { text: 'Register for Webinar', link: '#' },
+};
 
 export const footerData = {
   title: 'From The Margins\nTo The Mainstream',
   description:
-    'A curated collection of true stories by women in technology. Published by Women Techmakers Nsukka in celebration of International Women\'s Day 2026. Free — always and forever.',
+    "A curated collection of true stories by women in technology. Published by Women Techmakers Nsukka in celebration of International Women's Day 2026. Free — always and forever.",
   socials: [
     { label: 'Instagram', icon: '/assets/icons/instagram.svg', href: '#' },
     { label: 'Twitter', icon: '/assets/icons/twitter.svg', href: '#' },

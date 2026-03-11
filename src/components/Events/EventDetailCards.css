@@ -1,0 +1,251 @@
+/* ============================================================
+   EVENT DETAIL CARDS — Mobile first
+   Two cards: Main Event (dark navy) + Pre-Event Webinar (light)
+   ============================================================ */
+
+.edc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* ── MAIN EVENT CARD ───────────────────────────────────────── */
+
+.edc-main {
+  background-color: var(--dark-navy);
+  border-radius: 20px;
+  padding: 2rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 8px 32px rgba(15, 30, 138, 0.22);
+}
+
+.edc-main__heading {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1.75rem, 7vw, 2.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* rows */
+.edc-main__rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.edc-main__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.edc-main__row-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  gap: 0.5rem;
+}
+
+.edc-main__label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.edc-main__value {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: right;
+}
+
+.edc-main__value--free {
+  color: var(--brand-green);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.edc-main__divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  margin: 0;
+}
+
+/* CTA button */
+.edc-main__cta {
+  display: block;
+  width: 100%;
+  background-color: var(--brand-green);
+  color: var(--dark-navy);
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition:
+    opacity 0.2s ease,
+    transform 0.15s ease;
+  box-sizing: border-box;
+}
+
+.edc-main__cta:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* ── PRE-EVENT WEBINAR CARD ────────────────────────────────── */
+
+.edc-webinar {
+  background-color: #f1f3fb;
+  border-radius: 20px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 20px rgba(15, 30, 138, 0.08);
+}
+
+/* badge */
+.edc-webinar__badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.edc-webinar__badge-icon {
+  font-size: 1rem;
+  color: var(--brand-green);
+}
+
+.edc-webinar__badge-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--brand-green);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* heading & subtitle */
+.edc-webinar__heading {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1.4rem, 6vw, 1.75rem);
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.edc-webinar__subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #6b7a99;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* rows */
+.edc-webinar__rows {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.25rem;
+}
+
+.edc-webinar__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.edc-webinar__row-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  gap: 0.5rem;
+}
+
+.edc-webinar__label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #8a97b8;
+}
+
+.edc-webinar__value {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+  text-align: right;
+}
+
+.edc-webinar__divider {
+  border: none;
+  border-top: 1px solid rgba(15, 30, 138, 0.1);
+  margin: 0;
+}
+
+/* CTA button */
+.edc-webinar__cta {
+  display: block;
+  width: 100%;
+  background-color: var(--dark-navy);
+  color: #ffffff;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition:
+    opacity 0.2s ease,
+    transform 0.15s ease;
+  box-sizing: border-box;
+  margin-top: 0.25rem;
+}
+
+.edc-webinar__cta:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+
+@media screen and (min-width: 768px) {
+  .edc {
+    max-width: 960px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .edc-main,
+  .edc-webinar {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .edc {
+    gap: 2rem;
+    padding: 2.5rem 3rem;
+  }
+}

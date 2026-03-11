@@ -1,0 +1,67 @@
+/* ============================================================
+   BREAK THE PATTERN SECTION — Mobile first
+   ============================================================ */
+
+.btp {
+  background-color: var(--off-white);
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: var(--font-inter);
+}
+
+/* ── Main heading ──────────────────────────────────────────── */
+.btp__heading {
+  font-size: clamp(2rem, 9vw, 3.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--dark-navy);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ── Subheading ────────────────────────────────────────────── */
+.btp__subheading {
+  font-size: clamp(1.15rem, 4.5vw, 1.75rem);
+  font-weight: 800;
+  color: var(--dark-navy);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* ── Body copy ─────────────────────────────────────────────── */
+.btp__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.btp__body p {
+  font-size: clamp(0.95rem, 3vw, 1.125rem);
+  font-weight: 400;
+  color: var(--dark-navy);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.btp__body strong {
+  font-weight: 800;
+}
+
+/* ── Tablet + ──────────────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .btp {
+    padding: 4.5rem 3.5rem;
+    gap: 1.25rem;
+  }
+}
+
+/* ── Desktop ───────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) {
+  .btp {
+    padding: 5.5rem 6rem;
+  }
+}

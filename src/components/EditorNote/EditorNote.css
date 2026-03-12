@@ -5,6 +5,7 @@
 .editor-note {
   background-color: var(--light-green);
   padding: 3rem 1.25rem;
+  font-family: var(--font-inter);
 }
 
 .editor-note__card {
@@ -18,18 +19,12 @@
 /* ── Opening quote mark ─────────────────────────────────────── */
 .editor-note__open-quote {
   display: block;
-  font-family: var(--font-inter);
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 1;
-  color: var(--brand-green);
   margin-bottom: 0.5rem;
   user-select: none;
 }
 
 /* ── Heading ────────────────────────────────────────────────── */
 .editor-note__heading {
-  font-family: var(--font-inter);
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--dark-navy);
@@ -38,7 +33,6 @@
 
 /* ── Quote body ─────────────────────────────────────────────── */
 .editor-note__quote {
-  font-family: var(--font-inter);
   font-size: 1rem;
   font-weight: 400;
   color: var(--dark-text);
@@ -48,7 +42,6 @@
 
 /* ── Attribution ────────────────────────────────────────────── */
 .editor-note__attribution {
-  font-family: var(--font-inter);
   font-size: 0.9375rem;
   font-weight: 700;
   color: var(--dark-navy);

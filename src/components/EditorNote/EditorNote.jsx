@@ -1,4 +1,5 @@
 import { editorNote } from '../Data/Data';
+import quote from '/assets/icons/quote.svg';
 import './EditorNote.css';
 
 export default function EditorNote() {
@@ -6,7 +7,7 @@ export default function EditorNote() {
     <section className="editor-note" aria-labelledby="editor-note-heading">
       <div className="editor-note__card">
         <span className="editor-note__open-quote" aria-hidden="true">
-          &#8220;
+          <img src={quote} alt="" />
         </span>
         <h2 className="editor-note__heading" id="editor-note-heading">
           {editorNote.title}

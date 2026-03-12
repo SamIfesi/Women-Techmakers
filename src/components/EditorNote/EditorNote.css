@@ -8,7 +8,7 @@
 }
 
 .editor-note__card {
-  background-color: #ffffff;
+  background-color: var(--off-white);
   border-radius: 1.5rem;
   padding: 2rem 1.5rem 2rem;
   max-width: 48rem;

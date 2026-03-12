@@ -3,17 +3,17 @@
    ============================================================ */
 
 .book-details {
-  background-color: #ffffff;
+  background-color: var(--off-white);
   padding: 3rem 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  font-family: var(--font-inter);
 }
 
 /* ── Heading ────────────────────────────────────────────────── */
 .book-details__heading {
-  font-family: var(--font-inter);
   font-size: clamp(2rem, 8vw, 3.5rem);
   font-weight: 900;
   color: var(--dark-navy);
@@ -34,7 +34,7 @@
 /* ── Individual card ────────────────────────────────────────── */
 .book-details__card {
   background-color: var(--light-bg);
-  border-radius: 1rem;
+  border-radius: .5rem;
   padding: 1.25rem 1.25rem 1.125rem;
   display: flex;
   flex-direction: column;
@@ -42,20 +42,20 @@
 }
 
 .book-details__label {
-  font-family: var(--font-inter);
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--mid-text);
+  color: var(--light-text);
+  text-align: center;
 }
 
 .book-details__value {
-  font-family: var(--font-inter);
   font-size: 1rem;
   font-weight: 700;
   color: var(--dark-navy);
   line-height: 1.3;
+  text-align: center;
 }
 
 .book-details__value--highlight {
@@ -69,7 +69,6 @@
   max-width: 44rem;
   background-color: var(--brand-green);
   color: var(--dark-navy);
-  font-family: var(--font-inter);
   font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.08em;

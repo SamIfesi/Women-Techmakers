@@ -12,9 +12,9 @@ export default function About() {
       <Navbar />
       <main>
         <StoryBehindBook />
+        <EditorNote />
         <WhatsInside />
         <ReflectionPrompts />
-        <EditorNote />
         <BookDetails />
       </main>
       <Footer />

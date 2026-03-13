@@ -1,5 +1,5 @@
-import { Link } from 'react-router';
-import { bookDetails } from '../Data/Data';
+import { bookDetails } from '../Data/AboutData';
+import WaitlistPopup from '../Waitlist/WaitlistPopup';
 import './BookDetails.css';
 
 export default function BookDetails() {
@@ -26,9 +26,10 @@ export default function BookDetails() {
         ))}
       </div>
 
-      <Link to={bookDetails.cta.href} className="book-details__cta">
-        {bookDetails.cta.text}
-      </Link>
+      <WaitlistPopup
+        triggerText={bookDetails.cta.text}
+        triggerClassName="book-details__cta"
+      />
     </section>
   );
 }

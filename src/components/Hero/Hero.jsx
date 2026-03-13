@@ -1,6 +1,7 @@
 import './Hero.css';
 
-export default function Hero() {
+
+export default function Hero({ onJoinWaitlist }) {
   return (
     <section className="hero">
       {/* Badge */}
@@ -62,8 +63,8 @@ export default function Hero() {
           <a
             href="/"
             className="hero__cta hero__cta--primary"
-            target="_blank"
             rel="noopener noreferrer"
+            onClick={onJoinWaitlist}
           >
             Join the Waitlist
             <img

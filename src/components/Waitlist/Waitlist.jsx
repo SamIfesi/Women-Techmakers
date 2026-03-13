@@ -9,7 +9,7 @@ import FormWaitlist from './FormWaitlist'
 // const EJS_TEMPLATE_ID = import.meta.env.VITE_EJS_TEMPLATE_ID;
 // const EJS_PUBLIC_KEY  = import.meta.env.VITE_EJS_PUBLIC_KEY;
 
-export default function Waitlist() {
+export default function Waitlist({ waitlistRef }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [showModal, setShowModal] = useState(false);
@@ -72,6 +72,7 @@ export default function Waitlist() {
   return (
     <>
       <FormWaitlist
+        waitlistRef={waitlistRef}
         name={name}
         setName={setName}
         email={email}

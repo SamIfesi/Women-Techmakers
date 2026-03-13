@@ -1,6 +1,7 @@
 import './Waitlist.css';
 
 export default function FormWaitlist({
+  waitlistRef,
   name,
   setName,
   email,
@@ -9,7 +10,7 @@ export default function FormWaitlist({
   handleSubmit,
 }) {
   return (
-    <section className="waitlist-section">
+    <section className="waitlist-section" ref={waitlistRef}>
       <div className="waitlist-card">
         <h2 className="waitlist-title">Be The First To Know</h2>
         <p className="waitlist-subtitle">

@@ -1,4 +1,4 @@
-import { editorNote } from '../Data/Data';
+import { editorNote } from '../Data/AboutData';
 import quote from '/assets/icons/quote.svg';
 import './EditorNote.css';
 

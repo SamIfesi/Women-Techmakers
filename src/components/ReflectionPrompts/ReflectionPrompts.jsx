@@ -1,4 +1,4 @@
-import { reflectionPrompts } from '../Data/Data';
+import { reflectionPrompts } from '../Data/AboutData';
 import ReflectionPromptCard from './ReflectionPromptCard';
 import './ReflectionPrompts.css';
 

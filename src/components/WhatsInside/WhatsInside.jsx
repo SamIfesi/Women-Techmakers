@@ -1,4 +1,4 @@
-import { whatsInside } from '../Data/Data';
+import { whatsInside } from '../Data/AboutData';
 import WhatsInsideCard from './WhatsInsideCard';
 import './WhatsInside.css';
 

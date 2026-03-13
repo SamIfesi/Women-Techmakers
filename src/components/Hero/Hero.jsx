@@ -1,3 +1,4 @@
+import {Link} from 'react-router'
 import './Hero.css';
 
 
@@ -60,8 +61,8 @@ export default function Hero({ onJoinWaitlist }) {
 
         {/* CTAs */}
         <div className="hero__ctas">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="hero__cta hero__cta--primary"
             rel="noopener noreferrer"
             onClick={onJoinWaitlist}
@@ -72,15 +73,15 @@ export default function Hero({ onJoinWaitlist }) {
               alt=""
               aria-hidden="true"
             />
-          </a>
-          <a href="/" className="hero__cta hero__cta--secondary">
+          </Link>
+          <Link to="/About" className="hero__cta hero__cta--secondary">
             Learn More
             <img
               src="/assets/icons/vector-cta-sec.svg"
               alt=""
               aria-hidden="true"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

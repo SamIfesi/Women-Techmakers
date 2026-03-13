@@ -1,0 +1,103 @@
+/* ============================================================
+   CONTRIBUTORS HERO — Mobile first  (base styles target < 768px)
+   ============================================================ */
+
+.contributors-hero {
+  background-color: var(--dark-navy);
+  padding: 3.5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  font-family: var(--font-inter);
+}
+
+/* ── Eyebrow ────────────────────────────────────────────────── */
+.contributors-hero__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--brand-green);
+  letter-spacing: 0.01em;
+}
+
+/* ── Display title ──────────────────────────────────────────── */
+.contributors-hero__title {
+  font-size: clamp(2.5rem, 7vw, 8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--off-white);
+}
+
+/* ── Subtitle ───────────────────────────────────────────────── */
+.contributors-hero__subtitle {
+  font-size: clamp(0.9rem, 3.5vw, 1.0625rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--off-white);
+  line-height: 1.6;
+  max-width: 38ch;
+}
+
+/* ── Stat row ───────────────────────────────────────────────── */
+.contributors-hero__stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contributors-hero__stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-green);
+  line-height: 1;
+}
+
+.contributors-hero__stat-label {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--off-white);
+}
+
+/* ============================================================
+   Tablet — 768px and up
+   ============================================================ */
+@media screen and (min-width: 768px) {
+  .contributors-hero {
+    padding: 4.5rem 2.5rem 5rem;
+    gap: 1.5rem;
+  }
+
+  .contributors-hero__eyebrow {
+    font-size: 1rem;
+  }
+
+  .contributors-hero__stat-number {
+    font-size: 2.25rem;
+  }
+
+  .contributors-hero__stat-label {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   Desktop — 1024px and up
+   ============================================================ */
+@media screen and (min-width: 1024px) {
+  .contributors-hero {
+    padding: 6rem 5rem 6.5rem;
+    gap: 1.75rem;
+    max-width: 56rem;
+  }
+
+  .contributors-hero__eyebrow {
+    font-size: 1.0625rem;
+  }
+
+  .contributors-hero__stat-number {
+    font-size: 2.5rem;
+  }
+}

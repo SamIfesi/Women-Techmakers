@@ -1,0 +1,68 @@
+/* ============================================================
+   CONTRIBUTORS SHOWCASE — Mobile first
+   ============================================================ */
+
+.contributors-showcase {
+  background-color: var(--off-white);
+  padding: 3rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: var(--font-inter);
+}
+
+.contributors-showcase__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contributors-showcase__title {
+  font-size: clamp(2rem, 9vw, 2.75rem);
+  font-weight: 800;
+  color: #14203b;
+  letter-spacing: -0.02em;
+}
+
+.contributors-showcase__description {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #42526f;
+  line-height: 1.55;
+  max-width: 44ch;
+  margin: 0 auto;
+}
+
+.contributors-showcase__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contributors-showcase {
+    padding: 4rem 2.5rem 5rem;
+    gap: 2rem;
+  }
+
+  .contributors-showcase__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contributors-showcase {
+    padding: 4.5rem 2.5rem 5.5rem;
+    gap: 2.25rem;
+  }
+
+  .contributors-showcase__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 74rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

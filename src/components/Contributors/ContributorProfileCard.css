@@ -1,0 +1,157 @@
+/* ============================================================
+   CONTRIBUTOR PROFILE CARD — Mobile first
+   ============================================================ */
+
+.contributor-profile-card {
+  font-family: var(--font-inter);
+  background-color: var(--off-white);
+  border: 1px solid var(--light-text);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 26rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Top block keeps the same colored look, including coming soon cards */
+.contributor-profile-card__top {
+  background-color: #3f2c80;
+  background-image:
+    linear-gradient(rgba(33, 58, 183, 0.2), rgba(33, 58, 183, 0.2)),
+    url('/assets/img/overlay.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 11rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+
+.contributor-profile-card__avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  border: 0.25rem solid var(--off-white);
+  background-color: #050b68;
+  color: var(--off-white);
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.contributor-profile-card__bottom {
+  background-color: #f6f8fc;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.contributor-profile-card__name {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  color: #14203b;
+  line-height: 1.25;
+}
+
+.contributor-profile-card__role {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5a6d8d;
+  line-height: 1.35;
+}
+
+.contributor-profile-card__chapter {
+  align-self: flex-start;
+  background-color: var(--light-green);
+  border-radius: 999rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #00735f;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.contributor-profile-card__quote {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #42526f;
+  line-height: 1.6;
+}
+
+/* Coming soon content now lives in the second block */
+.contributor-profile-card--soon {
+  border-style: dashed;
+  border-color: var(--light-text);
+}
+
+.contributor-profile-card--soon .contributor-profile-card__bottom {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.contributor-profile-card__soon-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--light-text);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contributor-profile-card__soon-pill {
+  background-color: #dbe2ec;
+  border-radius: 999rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #5d708f;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .contributor-profile-card {
+    min-height: 29rem;
+  }
+
+  .contributor-profile-card__top {
+    min-height: 12.5rem;
+  }
+
+  .contributor-profile-card__avatar {
+    width: 6rem;
+    height: 6rem;
+    font-size: 2.125rem;
+  }
+
+  .contributor-profile-card__name {
+    font-size: 1.875rem;
+  }
+
+  .contributor-profile-card__role {
+    font-size: 1rem;
+  }
+
+  .contributor-profile-card__chapter {
+    font-size: 0.8125rem;
+  }
+
+  .contributor-profile-card__quote {
+    font-size: 0.95rem;
+  }
+
+  .contributor-profile-card__soon-title {
+    font-size: 2.25rem;
+  }
+}

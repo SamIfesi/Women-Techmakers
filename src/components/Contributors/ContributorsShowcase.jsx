@@ -1,5 +1,6 @@
-import {contributorCardsData} from '../Data/ContributorData';
+import { contributorCardsData } from '../Data/ContributorData';
 import ContributorProfileCard from './ContributorProfileCard';
+import WaitlistPopup from '../Waitlist/WaitlistPopup';
 import './ContributorsShowcase.css';
 
 export default function ContributorsShowcase() {
@@ -10,6 +11,10 @@ export default function ContributorsShowcase() {
           <ContributorProfileCard key={card.id} card={card} />
         ))}
       </div>
+      <WaitlistPopup
+        triggerText="get the book when it launches"
+        triggerClassName="contributor-showcase__cta"
+      />
     </section>
   );
 }

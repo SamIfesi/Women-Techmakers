@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar/Navbar';
-import StoryBehindBook from './components/About/StoryBehindBook';
+import StoryBehindBook from './components/Hero/AboutHero';
 import EditorNote from './components/EditorNote/EditorNote';
 import WhatsInside from './components/WhatsInside/WhatsInside';
 import ReflectionPrompts from './components/ReflectionPrompts/ReflectionPrompts';

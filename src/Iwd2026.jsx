@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar/Navbar';
-import AboutHero from './components/About/AboutHero';
+import AboutHero from './components/Hero/IwdHero';
 import BreakThePattern from './components/About/BreakThePattern';
 import WhatHappening from './components/WhatHappening/WhatHappening';
 import EventDetailCards from './components/Events/EventDetailCards';

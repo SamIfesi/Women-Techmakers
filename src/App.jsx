@@ -30,17 +30,17 @@ export default function App() {
         <FramerMotion delay={0.8}>
           <Chapters />
         </FramerMotion>
-        <FramerMotion delay={1}>
+        <FramerMotion delay={0.7}>
           <Contributors />
         </FramerMotion>
         <FramerMotion delay={0.3}>
           <Events />
         </FramerMotion>
-        <FramerMotion delay={1.5}>
+        <FramerMotion delay={0.5}>
           <Waitlist waitlistRef={waitlistRef} />
         </FramerMotion>
       </main>
-      <FramerMotion delay={1.5}>
+      <FramerMotion delay={0.8}>
         <Footer />
       </FramerMotion>
     </>

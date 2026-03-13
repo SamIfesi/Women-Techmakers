@@ -124,7 +124,7 @@ export const eventsData = {
       panelists: '3 Panelists',
       date: '9th March 2026',
       time: '7:00PM GMT+1',
-      link: '#',
+      link: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/',
       image: '/assets/img/flyer-1.png',
     },
     {
@@ -133,7 +133,7 @@ export const eventsData = {
       location: 'Nsukka, Nigeria',
       date: '28th March 2026',
       time: '10:00AM GMT+1',
-      link: '#',
+      link: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/',
       image: '/assets/img/flyer-2.png',
     },
   ],
@@ -204,7 +204,7 @@ export const mainEvent = {
     { label: 'Capacity', value: '120 participants' },
     { label: 'Cost', value: 'FREE', highlight: true },
   ],
-  cta: { text: 'Register Now — Free', link: '#' },
+  cta: { text: 'Register Now — Free', link: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/' },
 };
 
 export const webinarCard = {
@@ -217,7 +217,7 @@ export const webinarCard = {
     { label: 'Platform', value: 'Online' },
     { label: 'Cost', value: 'FREE' },
   ],
-  cta: { text: 'Register for Webinar', link: '#' },
+  cta: { text: 'Register for Webinar', link: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/' },
 };
 
 export const footerData = {
@@ -226,8 +226,8 @@ export const footerData = {
     "A curated collection of true stories by women in technology. Published by Women Techmakers Nsukka in celebration of International Women's Day 2026. Free — always and forever.",
   socials: [
     { label: 'Instagram', icon: '/assets/icons/instagram.svg', href: '#' },
-    { label: 'Twitter', icon: '/assets/icons/twitter.svg', href: '#' },
-    { label: 'LinkedIn', icon: '/assets/icons/linkedIn.svg', href: '#' },
+    { label: 'Twitter', icon: '/assets/icons/twitter.svg', href: 'https://x.com/iwdnsukka' },
+    { label: 'LinkedIn', icon: '/assets/icons/linkedIn.svg', href: 'https://www.linkedin.com/posts/women-techmakers-nsukka_most-techies-have-the-skills-but-lack-visibility-activity-7423262608474091520-fqQ0?utm_source=share&utm_medium=member_android&rcm=ACoAADsu2mkBpeWfOo-kxl_EB6jLldp_8MqtuLQ' },
   ],
   quickLinks: {
     heading: 'Quick Links',
@@ -243,9 +243,9 @@ export const footerData = {
   joinUs: {
     heading: 'Join Us',
     links: [
-      { label: 'Join our WhatsApp Community', href: '#' },
-      { label: 'Register for IWD 2026 (Free)', href: '#' },
-      { label: 'Join the Pre-Event Webinar', href: '#' },
+      { label: 'Join our WhatsApp Community', href: 'https://chat.whatsapp.com/FcayzKdGeUyJtCVk8IeD4X' },
+      { label: 'Register for IWD 2026 (Free)', href: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/' },
+      { label: 'Join the Pre-Event Webinar', href: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/' },
     ],
   },
   copyright: '© 2026 Women Techmakers Nsukka · Free to share · Not for resale',

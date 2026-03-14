@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router';
+import ScrollToTop from './components/ScrollToTop.jsx';
 import './index.css';
 import App from './App.jsx';
 import About from './About.jsx';
@@ -12,6 +13,7 @@ import Spotlight from './Spotlight.jsx';
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StrictMode>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/About" element={<About />} />

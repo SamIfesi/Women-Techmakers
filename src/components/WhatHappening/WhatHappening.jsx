@@ -1,4 +1,4 @@
-import { everthingPlanned } from '../Data/Data';
+import { everthingPlanned } from '../Data/IwdData';
 import WhatHappeningCard from './WhatHappeningCard';
 import './WhatHappening.css';
 

@@ -1,4 +1,4 @@
-import { mainEvent, webinarCard } from '../Data/Data';
+import { mainEvent, webinarCard } from '../Data/IwdData';
 import './EventDetailCards.css';
 import lightening from '/assets/icons/web-lightening.svg';
 

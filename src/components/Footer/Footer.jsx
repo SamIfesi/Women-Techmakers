@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { footerData } from '../Data/Data';
+import { footerData } from '../Data/NavFooterData';
 import './Footer.css';
 
 export default function Footer() {
@@ -25,14 +25,14 @@ export default function Footer() {
           <p className="footer__description">{description}</p>
           <div className="footer__socials">
             {socials.map(({ label, icon, href }) => (
-              <a
+              <Link
                 key={label}
                 to={href}
                 className="footer__social-link"
                 aria-label={label}
               >
                 <img src={icon} alt={label} />
-              </a>
+              </Link>
             ))}
           </div>
         </div>

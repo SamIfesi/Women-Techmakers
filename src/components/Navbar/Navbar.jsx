@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from "react-router";
-import { navLinks } from '../Data/Data';
+import { navLinks } from '../Data/NavFooterData';
 import './Navbar.css';
 import logo from '/assets/img/WTM_Logo_White.png';
 

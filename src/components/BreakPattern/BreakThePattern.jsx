@@ -1,4 +1,4 @@
-import { breakThePattern } from '../Data/Data';
+import { breakThePattern } from '../Data/IwdData';
 import './BreakThePattern.css';
 
 export default function BreakThePattern() {

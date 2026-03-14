@@ -1,0 +1,50 @@
+/* ============================================================
+   VOLUNTEER CARD — Mobile first
+   ============================================================ */
+
+.volunteer-card {
+  font-family: var(--font-inter);
+  background-color: var(--off-white);
+  border: 1px solid #d9dee8;
+  border-radius: 1rem;
+  padding: 1.3rem 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.volunteer-card__badge {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid #e5e8ee;
+  background-color: #f5f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #97a0b0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.volunteer-card__name {
+  color: var(--dark-navy);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .volunteer-card {
+    min-height: 11rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .volunteer-card__name {
+    font-size: 2rem;
+  }
+}

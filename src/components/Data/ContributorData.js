@@ -1,4 +1,4 @@
-export const contributorsHero = {
+export const contributor = {
   eyebrow: 'The Voices',
   titleLine1: 'Our',
   titleLine2: 'Contributors',

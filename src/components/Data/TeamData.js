@@ -33,3 +33,16 @@ export const coreTeam = {
     },
   ],
 };
+
+export const volunteers = {
+  title: 'Volunteers',
+  subtitle: 'The incredible people who supported the event',
+  members: [
+    { initials: 'V', name: 'Volunteer 1' },
+    { initials: 'V', name: 'Volunteer 2' },
+    { initials: 'V', name: 'Volunteer 3' },
+    { initials: 'V', name: 'Volunteer 4' },
+    { initials: 'V', name: 'Volunteer 5' },
+    { initials: 'V', name: 'Volunteer 6' },
+  ],
+};

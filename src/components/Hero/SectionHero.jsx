@@ -3,7 +3,9 @@ import './SectionHero.css';
 export default function SectionHero({
   eyebrow,
   titleLine1,
+  titleLine2Leading = '',
   titleLine2,
+  titleLine3 = '',
   subtitle,
   highlightLine2 = false,
   stats = null,
@@ -14,16 +16,28 @@ export default function SectionHero({
       <p className="section-hero__eyebrow">{eyebrow}</p>
 
       <h1 className="section-hero__title" id={sectionId}>
-        {titleLine1} {" "}
-        <span
-          className={
-            highlightLine2
-              ? 'section-hero__title-line section-hero__title-line--accent'
-              : 'section-hero__title-line'
-          }
-        >
-          {titleLine2}
+        <span className="section-hero__title-line">{titleLine1}</span>
+        <span className="section-hero__title-line">
+          {titleLine2Leading ? (
+            <>
+              <span className="section-hero__title-prefix">
+                {titleLine2Leading}{' '}
+              </span>
+            </>
+          ) : null}
+          <span
+            className={
+              highlightLine2
+                ? 'section-hero__title-word section-hero__title-word--accent'
+                : 'section-hero__title-word'
+            }
+          >
+            {titleLine2}
+          </span>
         </span>
+        {titleLine3 ? (
+          <span className="section-hero__title-line">{titleLine3}</span>
+        ) : null}
       </h1>
 
       <p className="section-hero__subtitle">{subtitle}</p>

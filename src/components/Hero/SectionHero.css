@@ -7,7 +7,7 @@
   padding: 5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   font-family: var(--font-inter);
 }
@@ -33,16 +33,23 @@
 }
 
 .section-hero__title-line {
+  display: block;
   color: var(--off-white);
 }
 
-.section-hero__title-line--accent {
+.section-hero__title-prefix,
+.section-hero__title-word {
+  color: var(--off-white);
+}
+
+.section-hero__title-word--accent {
   color: var(--brand-green);
 }
 
 .section-hero__subtitle {
   font-size: clamp(0.9rem, 3.5vw, 1.0625rem);
   font-weight: 400;
+  font-style: italic;
   color: var(--off-white);
   line-height: 1.6;
   max-width: 38ch;

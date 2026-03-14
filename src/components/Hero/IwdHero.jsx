@@ -1,3 +1,4 @@
+import {Link} from 'react-router';
 import './IwdHero.css';
 
 export default function IwdHero() {
@@ -51,14 +52,14 @@ export default function IwdHero() {
       </ul>
 
       {/* CTA */}
-      <a
-        href=""
+      <Link
+        to="https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/"
         className="iwd-hero__cta"
         target="_blank"
         rel="noopener noreferrer"
       >
         Register for IWD 2026 &mdash; Free
-      </a>
+      </Link>
     </section>
   );
 }

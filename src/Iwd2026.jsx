@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar/Navbar';
-import AboutHero from './components/Hero/IwdHero';
-import BreakThePattern from './components/About/BreakThePattern';
+import IwdHero from './components/Hero/IwdHero';
+import BreakThePattern from './components/BreakPattern/BreakThePattern';
 import WhatHappening from './components/WhatHappening/WhatHappening';
 import EventDetailCards from './components/Events/EventDetailCards';
 import Gallery from './components/Gallery/Gallery';
@@ -11,7 +11,7 @@ export default function About() {
     <>
       <Navbar />
       <main>
-        <AboutHero />
+        <IwdHero />
         <BreakThePattern />
         <WhatHappening />
         <EventDetailCards />

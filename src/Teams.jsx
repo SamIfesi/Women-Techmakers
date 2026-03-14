@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar/Navbar';
 import { teamHero } from './components/Data/TeamData';
 import SectionHero from './components/Hero/SectionHero';
+import CoreTeam from './components/Team/CoreTeam';
 import Footer from './components/Footer/Footer';
 
 export default function Teams() {
@@ -17,6 +18,7 @@ export default function Teams() {
           stats={null}
           sectionId="team-hero-heading"
         />
+        <CoreTeam />
       </main>
       <Footer />
     </>

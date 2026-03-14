@@ -3,6 +3,7 @@ export const navLinks = [
   { label: 'About', path: '/About' },
   { label: 'Contributors', path: '/Contributors' },
   { label: 'IWD 2026', path: '/Iwd2026' },
+  { label: 'Spotlight', path: '/Spotlight' },
   { label: 'Our Team', path: '/Teams' },
 ];
 
@@ -29,7 +30,7 @@ export const footerData = {
       { label: 'About the Book', href: '/About' },
       { label: 'Contributors', href: '/Contributors' },
       { label: 'IWD 2026 Event', href: '/Iwd2026' },
-      { label: 'Women Spotlight', href: '#' },
+      { label: 'Women Spotlight', href: '/Spotlight' },
       { label: 'Our Team', href: '/Teams' },
       { label: 'Partners', href: '#' },
     ],

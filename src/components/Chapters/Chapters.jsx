@@ -1,3 +1,4 @@
+import {Link} from 'react-router'
 import { chapters } from '../Data/Data';
 import ChapterCard from './ChapterCard';
 import arrowRight from '/assets/icons/arrow-right.svg';
@@ -17,10 +18,10 @@ export default function Chapters() {
           />
         ))}
       </div>
-      <a href="/" className="chapters__link">
+      <Link to="/About" className="chapters__link">
       Read the full story behind the book
       <img src={arrowRight} alt="Arrow pointing right" className="chapters__link-icon" />
-      </a>
+      </Link>
     </section>
   );
 }

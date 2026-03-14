@@ -2,6 +2,7 @@ import Navbar from './components/Navbar/Navbar';
 import { spotlightHero } from './components/Data/SpotlightData';
 import SectionHero from './components/Hero/SectionHero';
 import SpotlightAbout from './components/Spotlight/SpotlightAbout';
+import SpotlightNomination from './components/Spotlight/SpotlightNomination';
 import Footer from './components/Footer/Footer';
 
 export default function Spotlight() {
@@ -21,6 +22,7 @@ export default function Spotlight() {
           sectionId="spotlight-hero-heading"
         />
         <SpotlightAbout />
+        <SpotlightNomination />
       </main>
       <Footer />
     </>

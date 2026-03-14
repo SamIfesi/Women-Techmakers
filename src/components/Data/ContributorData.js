@@ -4,7 +4,8 @@ export const contributorsHero = {
   titleLine2: 'Contributors',
   subtitle:
     '12 women. 12 stories. Each one real, raw, and remarkable. These are the voices that make this book what it is.',
-  stat: { number: '12', label: 'Women · Stories · 1 Book' },
+
+  stat: {number: '12 Women', label: ' • 12 Stories • 1 Book'},
 };
 
 export const contributorCardsData = [

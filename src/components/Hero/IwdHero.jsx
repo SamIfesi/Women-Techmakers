@@ -1,50 +1,50 @@
 import './IwdHero.css';
 
-export default function AboutHero() {
+export default function IwdHero() {
   return (
-    <section className="about-hero">
+    <section className="iwd-hero">
       {/* Eyebrow */}
-      <p className="about-hero__eyebrow">International Women&apos;s Day</p>
+      <p className="iwd-hero__eyebrow">International Women&apos;s Day</p>
 
       {/* Display heading */}
-      <h1 className="about-hero__title">
-        <span className="about-hero__title--white">Break The</span>
+      <h1 className="iwd-hero__title">
+        <span className="iwd-hero__title--white">Break The</span>
         <br />
-        <span className="about-hero__title--green">Pattern</span>
+        <span className="iwd-hero__title--green">Pattern</span>
       </h1>
 
       {/* Tagline */}
-      <p className="about-hero__tagline">
+      <p className="iwd-hero__tagline">
         Women Shaping the Future of Tech &mdash; IWD 2026, University of
         Nigeria, Nsukka
       </p>
 
       {/* Event meta */}
-      <ul className="about-hero__meta" aria-label="Event details">
-        <li className="about-hero__meta-item">
+      <ul className="iwd-hero__meta" aria-label="Event details">
+        <li className="iwd-hero__meta-item">
           <img
             src="/assets/icons/calendar.svg"
             alt=""
             aria-hidden="true"
-            className="about-hero__meta-icon"
+            className="iwd-hero__meta-icon"
           />
           <span>28th March 2026</span>
         </li>
-        <li className="about-hero__meta-item">
+        <li className="iwd-hero__meta-item">
           <img
             src="/assets/icons/location.svg"
             alt=""
             aria-hidden="true"
-            className="about-hero__meta-icon"
+            className="iwd-hero__meta-icon"
           />
           <span>University of Nigeria, Nsukka</span>
         </li>
-        <li className="about-hero__meta-item">
+        <li className="iwd-hero__meta-item">
           <img
             src="/assets/icons/seats.svg"
             alt=""
             aria-hidden="true"
-            className="about-hero__meta-icon"
+            className="iwd-hero__meta-icon"
           />
           <span>120 seats (Free)</span>
         </li>
@@ -53,7 +53,7 @@ export default function AboutHero() {
       {/* CTA */}
       <a
         href=""
-        className="about-hero__cta"
+        className="iwd-hero__cta"
         target="_blank"
         rel="noopener noreferrer"
       >

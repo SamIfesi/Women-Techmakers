@@ -2,7 +2,7 @@
    ABOUT HERO — Mobile first
    ============================================================ */
 
-.about-hero {
+.iwd-hero {
   background-color: var(--dark-navy);
   padding: 3rem 1.5rem 3.5rem;
   display: flex;
@@ -13,7 +13,7 @@
 }
 
 /* ── Eyebrow ───────────────────────────────────────────────── */
-.about-hero__eyebrow {
+.iwd-hero__eyebrow {
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--brand-green);
@@ -22,7 +22,7 @@
 }
 
 /* ── Display title ─────────────────────────────────────────── */
-.about-hero__title {
+.iwd-hero__title {
   font-size: clamp(4rem, 11vw, 7.5rem);
   font-weight: 800;
   line-height: 0.95;
@@ -31,27 +31,27 @@
   text-transform: uppercase;
 }
 
-.about-hero__title--white {
-  color: #ffffff;
+.iwd-hero__title--white {
+  color: var(--off-white);
 }
 
-.about-hero__title--green {
+.iwd-hero__title--green {
   color: var(--brand-green);
   letter-spacing: 0.05rem;
 }
 
 /* ── Tagline ───────────────────────────────────────────────── */
-.about-hero__tagline {
+.iwd-hero__tagline {
   font-size: clamp(0.95rem, 3.5vw, 1.125rem);
   font-weight: 400;
-  color: #ffffff;
+  color: var(--off-white);
   line-height: 1.55;
   margin: 0;
   max-width: 40ch;
 }
 
 /* ── Meta list ─────────────────────────────────────────────── */
-.about-hero__meta {
+.iwd-hero__meta {
   list-style: none;
   padding: 0;
   margin: 0.25rem 0 0;
@@ -60,16 +60,16 @@
   gap: 0.75rem;
 }
 
-.about-hero__meta-item {
+.iwd-hero__meta-item {
   display: flex;
   align-items: center;
   gap: 0.625rem;
   font-size: 0.925rem;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--off-white);
 }
 
-.about-hero__meta-icon {
+.iwd-hero__meta-icon {
   width: 1.25rem;
   height: 1.25rem;
   flex-shrink: 0;
@@ -79,7 +79,7 @@
 }
 
 /* ── CTA button ────────────────────────────────────────────── */
-.about-hero__cta {
+.iwd-hero__cta {
   display: inline-block;
   margin-top: 0.75rem;
   padding: 1rem 2rem;
@@ -95,37 +95,37 @@
   white-space: nowrap;
 }
 
-.about-hero__cta:hover {
+.iwd-hero__cta:hover {
   background-color: #00bc7a;
 }
 
-.about-hero__cta:active {
+.iwd-hero__cta:active {
   transform: scale(0.97);
 }
 
 /* ── Tablet + ──────────────────────────────────────────────── */
 @media screen and (min-width: 768px) {
-  .about-hero {
+  .iwd-hero {
     padding: 5rem 3.5rem 5rem;
     gap: 1.5rem;
   }
 
-  .about-hero__title {
+  .iwd-hero__title {
     font-size: clamp(5.5rem, 14vw, 9rem);
   }
 
-  .about-hero__tagline {
+  .iwd-hero__tagline {
     font-size: 1.125rem;
   }
 }
 
 /* ── Desktop ───────────────────────────────────────────────── */
 @media screen and (min-width: 1024px) {
-  .about-hero {
+  .iwd-hero {
     padding: 6rem 6rem 6rem;
   }
 
-  .about-hero__title {
+  .iwd-hero__title {
     font-size: 9rem;
   }
 }

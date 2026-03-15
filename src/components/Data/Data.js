@@ -65,7 +65,7 @@ export const contributorsData = {
     {
       name: 'Victoria Ofuasia',
       role: 'Researcher & Backend Developer',
-      image: null,
+      image: '/assets/img/Victoria-Ofuasia.jpeg',
     },
     {
       name: 'Oluwabukola Adesina',

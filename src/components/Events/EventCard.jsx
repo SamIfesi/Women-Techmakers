@@ -1,3 +1,4 @@
+import {Link} from 'react-router'
 import './EventCard.css';
 
 export default function EventCard({
@@ -41,21 +42,19 @@ export default function EventCard({
       </div>
 
       {/* CTA */}
-      <a
-        href={link}
+      <Link
+        to={link}
         className="event-card__cta"
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Register free for ${title}`}
       >
-        Register
-        <br />
-        Free
+        Register Free
         <span className="event-card__arrow" aria-hidden="true">
           {' '}
           →
         </span>
-      </a>
+      </Link>
     </article>
   );
 }

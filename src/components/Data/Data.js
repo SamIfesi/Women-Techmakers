@@ -59,7 +59,7 @@ export const contributorsData = {
   contributors: [
     {
       name: 'Patricia Oko',
-      role: 'Editor',
+      role: 'Curator/Editor',
       image: '/assets/img/contributors/Patricia-Oko.png',
     },
     {

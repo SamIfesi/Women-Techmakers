@@ -15,21 +15,26 @@ export const coreTeam = {
       initials: 'PO',
       name: 'Patricia Oko',
       role: 'Lead Organiser & Book Editor',
+      image: '/assets/img/teams/Patricia-Oko.png',
     },
     {
       initials: 'TM',
       name: 'Team Member 2',
       role: 'Content Lead',
+      image: null, // Placeholder for future image
     },
     {
       initials: 'TM',
       name: 'Team Member 3',
       role: 'Design Lead',
+      image: null, // Placeholder for future image
+
     },
     {
       initials: 'TM',
       name: 'Team Member 4',
       role: 'Logistics Coordinator',
+      image: null, // Placeholder for future image
     },
   ],
 };

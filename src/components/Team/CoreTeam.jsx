@@ -17,6 +17,7 @@ export default function CoreTeam() {
             initials={member.initials}
             name={member.name}
             role={member.role}
+            image={member.image}
           />
         ))}
       </div>

@@ -58,6 +58,11 @@ export const contributorsData = {
     'Twelve women, twelve stories. One book that would not exist without their courage to tell the truth',
   contributors: [
     {
+      name: 'Patricia Oko',
+      role: 'Editor',
+      image: '/assets/img/contributors/Patricia-Oko.png',
+    },
+    {
       name: 'Anyika Uchechukwu Lorreta',
       role: 'Data Engineer & Instructor',
       image: null,
@@ -65,7 +70,7 @@ export const contributorsData = {
     {
       name: 'Victoria Ofuasia',
       role: 'Researcher & Backend Developer',
-      image: '/assets/img/Victoria-Ofuasia.jpeg',
+      image: '/assets/img/contributors/Victoria-Ofuasia.jpeg',
     },
     {
       name: 'Oluwabukola Adesina',
@@ -73,19 +78,54 @@ export const contributorsData = {
       image: null,
     },
     {
-      name: "Contributor's name",
+      name: 'Eno Peters',
       role: 'Coming Soon',
-      image: null,
+      image: '/assets/img/contributors/Eno-Peters.jpeg',
     },
     {
-      name: "Contributor's name",
+      name: "Okwara Munachiso",
       role: 'Coming Soon',
-      image: null,
+      image: '/assets/img/contributors/Okwara-Munachimso.jpeg',
     },
     {
-      name: "Contributor's name",
+      name: "Oluwatoyin Mary Oladeji",
       role: 'Coming Soon',
-      image: null,
+      image: '/assets/img/contributors/Oluwatoyin-Oladeji.jpg',
+    },
+    {
+      name: "Onuoha Gloria",
+      role: 'Coming Soon',
+      image: '/assets/img/contributors/Onuoha-Gloria.jpeg',
+    },
+    {
+      name: "Godsfavor Ezeliora",
+      role: 'Coming Soon',
+      image: '/assets/img/contributors/Godsfavour-Ezeliora.jpg',
+    },
+    {
+      name: "Imaabasi Aniema",
+      role: 'Coming Soon',
+      image: '/assets/img/contributors/Imaabasi-Aniema.jpeg',
+    },
+    {
+      name: "Jessica Eze",
+      role: 'Coming Soon',
+      image: '/assets/img/contributors/Jessica-Eze.jpg',
+    },
+    {
+      name: "Madubueze Gloria Ifeoma",
+      role: 'Coming Soon',
+      image: '/assets/img/contributors/Madubueze-Gloria.jpeg',
+    },
+    {
+      name: "Mmesoma Stella",
+      role: 'Coming Soon',
+      image: '/assets/img/contributors/Mmesoma-Stella.jpeg',
+    },
+    {
+      name: "Mojisola Alegbe",
+      role: 'Coming Soon',
+      image: '/assets/img/contributors/Mojisola-Alegbe.png',
     },
   ],
 };

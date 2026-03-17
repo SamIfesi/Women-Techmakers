@@ -19,22 +19,33 @@ export const coreTeam = {
     },
     {
       initials: 'TM',
-      name: 'Team Member 2',
-      role: 'Content Lead',
-      image: null, // Placeholder for future image
-    },
-    {
-      initials: 'TM',
-      name: 'Team Member 3',
-      role: 'Design Lead',
-      image: null, // Placeholder for future image
+      name: 'Chukwuemeka Chidimma Faith',
+      role: 'Graphic Designer',
+      image: '/assets/img/teams/Chukwuemeka-Faith.jpg',
 
     },
     {
       initials: 'TM',
-      name: 'Team Member 4',
-      role: 'Logistics Coordinator',
-      image: null, // Placeholder for future image
+      name: 'Okwara Munachiso Adaugo',
+      role: 'Product Designer',
+      image: '/assets/img/teams/Okwara-Munachimso.jpeg', 
+    },
+    {
+      initials: 'TM',
+      name: 'Stephen Joan Nneoma',
+      role: 'Community Manager',
+      image: '/assets/img/teams/Stephen-Joan.jpg', 
+    },
+    {
+      initials: 'TM',
+      name: 'Ihuoma N. Obasi',
+      role: 'Communication Lead',
+      image: "/assets/img/teams/Ihuoma-Obasi.jpg", 
+    },{
+      initials: 'TM',
+      name: 'Jessica Eze',
+      role: 'Partnership Manager',
+      image: '/assets/img/teams/Jessica-Eze.jpg', 
     },
   ],
 };

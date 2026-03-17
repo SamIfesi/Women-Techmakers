@@ -14,8 +14,8 @@
 
 /* Avatar circle */
 .contributor-card__avatar {
-  width: 110px;
-  height: 110px;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   overflow: hidden;
   background-color: var(--off-white);

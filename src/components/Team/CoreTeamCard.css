@@ -3,15 +3,25 @@
    ============================================================ */
 
 .core-team-card {
+  font-family: var(--font-inter);
   border-radius: 1rem;
   overflow: hidden;
   background-color: var(--off-white);
-  box-shadow: 0 0.5rem 1.5rem rgba(13, 26, 58, 0.12);
+  box-shadow: 0 0.25rem 1rem rgba(13, 26, 58, 0.1);
+  max-width: 22rem;
+  width: 100%;
+  margin: 0 auto;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.core-team-card:hover {
+  box-shadow: 0 0.75rem 2rem rgba(13, 26, 58, 0.18);
+  transform: translateY(-3px);
 }
 
 .core-team-card__top {
   background-color: var(--dark-navy);
-  min-height: 14rem;
+  height: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,18 +30,18 @@
 
 .core-team-card__top img {
   width: 100%;
-  height: 14rem;
+  height: 100%;
   object-fit: cover;
   object-position: top;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
-.core-team-card__top:hover img {
+
+.core-team-card:hover .core-team-card__top img {
   transform: scale(1.05);
 }
 
 .core-team-card__initials {
-  font-family: var(--font-inter);
   font-size: clamp(3rem, 14vw, 4.25rem);
   font-weight: 800;
   line-height: 1;
@@ -40,39 +50,36 @@
 }
 
 .core-team-card__bottom {
-  background-color: var(--off-white);
-  padding: 1.5rem 1rem 1.75rem;
+  padding: 1.35rem 1.25rem 1.5rem;
   text-align: center;
+  border-top: 3px solid var(--brand-green);
 }
 
 .core-team-card__name {
-  font-family: var(--font-inter);
   color: var(--dark-navy);
-  font-size: clamp(1.75rem, 4.8vw, 2.2rem);
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.15;
-  margin: 0;
+  line-height: 1.2;
 }
 
 .core-team-card__role {
-  font-family: var(--font-inter);
   color: var(--brand-green);
-  font-size: clamp(1.1rem, 3.8vw, 1.35rem);
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.35;
-  margin: 0.75rem 0 0;
+  margin: 0.4rem 0 0;
 }
 
 @media screen and (min-width: 768px) {
   .core-team-card__top {
-    min-height: 15.5rem;
+    height: 20rem;
   }
 
-  .core-team-card__top img {
-    height: 15.5rem;
+  .core-team-card__name {
+    font-size: 1.1rem;
   }
 
-  .core-team-card__bottom {
-    padding: 2rem 1.5rem 2.25rem;
+  .core-team-card__role {
+    font-size: 0.9rem;
   }
 }

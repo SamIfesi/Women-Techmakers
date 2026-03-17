@@ -128,11 +128,6 @@ export const contributorsData = {
       image: '/assets/img/contributors/Mojisola-Alegbe.png',
     },
     {
-      name: 'Chukwuemeka Chidimma Faith',
-      role: 'Graphic Designer',
-      image: '/assets/img/contributors/Chukwuemeka-Faith.jpg',
-    },
-    {
       name: 'Chidinma Christabel Ukaegbu',
       role: 'Senior Product Designer & Design Educator',
       image: '/assets/img/contributors/Chidinma-Christabel.jpg',

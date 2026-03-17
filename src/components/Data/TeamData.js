@@ -54,11 +54,45 @@ export const volunteers = {
   title: 'Volunteers',
   subtitle: 'The incredible people who supported the event',
   members: [
-    { initials: 'V', name: 'Volunteer 1' },
-    { initials: 'V', name: 'Volunteer 2' },
-    { initials: 'V', name: 'Volunteer 3' },
-    { initials: 'V', name: 'Volunteer 4' },
-    { initials: 'V', name: 'Volunteer 5' },
-    { initials: 'V', name: 'Volunteer 6' },
+    {
+      initials: 'JO',
+      name: 'Josephine Chidimma Orji',
+      image: '/assets/img/voluteers/Chidimma-Orji.jpg',
+    },
+    {
+      initials: 'IC',
+      name: 'Igwe Chinonso Favour',
+      image: '/assets/img/voluteers/Igwe-Favour.jpg',
+    },
+    {
+      initials: 'OR',
+      name: 'Onyinye Rosemary Obiefoka',
+      image: '/assets/img/voluteers/Rosemary-Obiefoka.jpg',
+    },
+    {
+      initials: 'PA',
+      name: 'Pius Catherine Akuoma',
+      image: '/assets/img/voluteers/Pius-Akuoma.jpg',
+    },
+    {
+      initials: 'UF',
+      name: 'Udeh Ujunwa Faustina',
+      image: '/assets/img/voluteers/Udeh-Faustina.jpg',
+    },
+    {
+      initials: 'UC',
+      name: 'Ugwuishiwu Chibuike Samson',
+      image: '/assets/img/voluteers/Ugwuishiwu-Samson.jpg',
+    },
+    {
+      initials: 'CC',
+      name: 'Chukwuemeka Chidimma Faith',
+      image: '/assets/img/voluteers/Chidimma-Faith.jpg',
+    },
+    {
+      initials: 'UU',
+      name: 'Unknown',
+      image: '/assets/img/voluteers/Unknown.jpg',
+    },
   ],
 };

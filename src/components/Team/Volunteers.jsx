@@ -62,6 +62,7 @@ export default function Volunteers() {
             key={member.name}
             initials={member.initials}
             name={member.name}
+            image={member.image}
           />
         ))}
       </div>

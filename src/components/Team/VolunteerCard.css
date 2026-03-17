@@ -7,44 +7,68 @@
   background-color: var(--off-white);
   border: 1px solid #d9dee8;
   border-radius: 1rem;
-  padding: 1.3rem 1rem 1.25rem;
+  padding:1.25rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  gap: 0.75rem;
+  max-width: 14rem;
+  width: 100%;
+  margin: 0 auto;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
-.volunteer-card__badge {
-  width: 3rem;
-  height: 3rem;
+.volunteer-card:hover {
+  box-shadow: 0 0.5rem 1.25rem rgba(13, 26, 58, 0.12);
+  transform: translateY(-2px);
+}
+
+.volunteer-card__avatar {
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
-  border: 1px solid #e5e8ee;
-  background-color: #f5f6f8;
+  overflow: hidden;
+  background-color: var(--dark-navy);
+  border: 3px solid var(--brand-green);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #97a0b0;
+  flex-shrink: 0;
+}
+
+.volunteer-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.volunteer-card__initials {
+  color: rgba(255, 255, 255, 0.4);
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
 }
 
 .volunteer-card__name {
   color: var(--dark-navy);
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
   text-align: center;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .volunteer-card {
-    min-height: 11rem;
-    padding: 1.5rem 1.25rem;
+  .volunteer-card__avatar {
+    width: 7rem;
+    height: 7rem;
   }
 
   .volunteer-card__name {
-    font-size: 2rem;
+    font-size: 0.95rem;
   }
 }

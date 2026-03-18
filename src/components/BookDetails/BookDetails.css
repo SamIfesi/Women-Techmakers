@@ -63,6 +63,11 @@
 }
 
 /* ── CTA button ─────────────────────────────────────────────── */
+.cta-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .book-details__cta {
   display: block;
   width: 100%;

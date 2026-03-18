@@ -4,7 +4,7 @@
 
 .contributors-showcase {
   background-color: var(--off-white);
-  padding: 3rem 1rem 4rem;
+  padding: 3rem 1.25rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -39,8 +39,20 @@
   grid-template-columns: 1fr;
   gap: 1rem;
 }
+
+.contributors-showcase__grid > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contributors-showcase__grid > div > .contributor-profile-card {
+  height: 100%;
+}
+
 .contributor-showcase__cta{
   background: var(--dark-navy);
+  width: 100%;
   font-size: .9rem;
   font-weight: 800;
   letter-spacing: 0.05em;

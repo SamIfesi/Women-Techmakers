@@ -43,9 +43,13 @@
   max-width: 34ch;
 }
 
-.spotlight-nomination__form {
+.spotlight-nomination-wrapper {
   width: 100%;
   max-width: 32rem;
+}
+
+.spotlight-nomination__form {
+  width: 100%;
   background-color: var(--off-white);
   border-radius: 0.75rem;
   padding: 1.75rem 1.25rem;

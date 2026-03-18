@@ -1,3 +1,4 @@
+import FramerMotion from '../FramerMotion';
 import { spotlightAbout } from '../Data/SpotlightData';
 import './SpotlightAbout.css';
 
@@ -7,7 +8,7 @@ export default function SpotlightAbout() {
       className="spotlight-about"
       aria-labelledby="spotlight-about-heading"
     >
-      <div className="spotlight-about__head">
+      <FramerMotion className="spotlight-about__head" delay={0.1}>
         <img
           src={spotlightAbout.icon}
           alt=""
@@ -17,13 +18,13 @@ export default function SpotlightAbout() {
         <h2 className="spotlight-about__title" id="spotlight-about-heading">
           {spotlightAbout.title}
         </h2>
-      </div>
+      </FramerMotion>
 
       <div className="spotlight-about__body">
         {spotlightAbout.paragraphs.map((paragraph, index) => (
-          <p key={index} className="spotlight-about__text">
-            {paragraph}
-          </p>
+          <FramerMotion key={index} delay={index * 0.1 + 0.2}>
+            <p className="spotlight-about__text">{paragraph}</p>
+          </FramerMotion>
         ))}
       </div>
     </section>

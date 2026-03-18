@@ -1,3 +1,4 @@
+import FramerMotion from '../FramerMotion';
 import { spotlightNomination } from '../Data/SpotlightData';
 import './SpotlightNomination.css';
 
@@ -11,7 +12,7 @@ export default function SpotlightNomination() {
       className="spotlight-nomination"
       aria-labelledby="spotlight-nomination-heading"
     >
-      <div className="spotlight-nomination__head">
+      <FramerMotion className="spotlight-nomination__head" delay={0.1}>
         <img
           src={spotlightNomination.icon}
           alt=""
@@ -24,49 +25,55 @@ export default function SpotlightNomination() {
         >
           {spotlightNomination.title}
         </h2>
-      </div>
+      </FramerMotion>
 
-      <p className="spotlight-nomination__intro">{spotlightNomination.intro}</p>
-
-      <form
-        className="spotlight-nomination__form"
-        onSubmit={handleSubmit}
-        noValidate
-      >
-        {spotlightNomination.fields.map((field) => (
-          <div className="spotlight-nomination__field" key={field.id}>
-            <label className="spotlight-nomination__label" htmlFor={field.id}>
-              {field.label}
-              {field.required ? ' *' : ''}
-            </label>
-
-            {field.type === 'textarea' ? (
-              <textarea
-                id={field.id}
-                className="spotlight-nomination__input spotlight-nomination__input--textarea"
-                placeholder={field.placeholder}
-                required={field.required}
-              />
-            ) : (
-              <input
-                id={field.id}
-                type={field.type}
-                className="spotlight-nomination__input"
-                placeholder={field.placeholder}
-                required={field.required}
-              />
-            )}
-          </div>
-        ))}
-
-        <button type="submit" className="spotlight-nomination__cta">
-          {spotlightNomination.submitText}
-        </button>
-
-        <p className="spotlight-nomination__deadline">
-          {spotlightNomination.deadlineText}
+      <FramerMotion delay={0.2}>
+        <p className="spotlight-nomination__intro">
+          {spotlightNomination.intro}
         </p>
-      </form>
+      </FramerMotion>
+
+      <FramerMotion delay={0.3} className="spotlight-nomination-wrapper">
+        <form
+          className="spotlight-nomination__form"
+          onSubmit={handleSubmit}
+          noValidate
+        >
+          {spotlightNomination.fields.map((field) => (
+            <div className="spotlight-nomination__field" key={field.id}>
+              <label className="spotlight-nomination__label" htmlFor={field.id}>
+                {field.label}
+                {field.required ? ' *' : ''}
+              </label>
+
+              {field.type === 'textarea' ? (
+                <textarea
+                  id={field.id}
+                  className="spotlight-nomination__input spotlight-nomination__input--textarea"
+                  placeholder={field.placeholder}
+                  required={field.required}
+                />
+              ) : (
+                <input
+                  id={field.id}
+                  type={field.type}
+                  className="spotlight-nomination__input"
+                  placeholder={field.placeholder}
+                  required={field.required}
+                />
+              )}
+            </div>
+          ))}
+
+          <button type="submit" className="spotlight-nomination__cta">
+            {spotlightNomination.submitText}
+          </button>
+
+          <p className="spotlight-nomination__deadline">
+            {spotlightNomination.deadlineText}
+          </p>
+        </form>
+      </FramerMotion>
     </section>
   );
 }

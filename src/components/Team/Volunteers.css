@@ -36,7 +36,7 @@
   margin: 0.8rem 0 0;
   font-family: var(--font-inter);
   color: #6f7b94;
-  font-size: clamp(.9rem, 1vw, 1.8rem);
+  font-size: clamp(0.9rem, 1vw, 1.8rem);
   line-height: 1.35;
   font-weight: 400;
 }
@@ -47,6 +47,16 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.volunteers__grid > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.volunteers__grid > div > .volunteer-card {
+  height: 100%;
 }
 
 @media screen and (min-width: 600px) {
@@ -64,9 +74,9 @@
     margin-bottom: 2.25rem;
   }
 }
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .volunteers__grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
   }
-  }
+}

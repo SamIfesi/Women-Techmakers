@@ -1,4 +1,5 @@
-import {Link} from 'react-router'
+import { Link } from 'react-router';
+import FramerMotion from '../FramerMotion';
 import { chapters } from '../Data/Data';
 import ChapterCard from './ChapterCard';
 import arrowRight from '/assets/icons/arrow-right.svg';
@@ -8,20 +9,27 @@ export default function Chapters() {
   return (
     <section className="chapters" id="chapters">
       <div className="chapters__grid">
-        {chapters.map((chapter) => (
-          <ChapterCard
-            key={chapter.number}
-            number={chapter.number}
-            label={chapter.label}
-            title={chapter.title}
-            description={chapter.description}
-          />
+        {chapters.map((chapter, index) => (
+          <FramerMotion key={chapter.number} delay={index * 0.15}>
+            <ChapterCard
+              number={chapter.number}
+              label={chapter.label}
+              title={chapter.title}
+              description={chapter.description}
+            />
+          </FramerMotion>
         ))}
       </div>
-      <Link to="/About" className="chapters__link">
-      Read the full story behind the book
-      <img src={arrowRight} alt="Arrow pointing right" className="chapters__link-icon" />
-      </Link>
+      <FramerMotion delay={0.2}>
+        <Link to="/About" className="chapters__link">
+          Read the full story behind the book
+          <img
+            src={arrowRight}
+            alt="Arrow pointing right"
+            className="chapters__link-icon"
+          />
+        </Link>
+      </FramerMotion>
     </section>
   );
 }

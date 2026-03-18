@@ -1,12 +1,12 @@
-import {Link} from 'react-router'
+import { Link } from 'react-router';
+import FramerMotion from '../FramerMotion';
 import './Hero.css';
-
 
 export default function Hero({ onJoinWaitlist }) {
   return (
     <section className="hero">
       {/* Badge */}
-      <div className="hero__badge" role="note">
+      <FramerMotion className="hero__badge" role="note" delay={0.1}>
         <span>IWD 2026</span>
         <span className="hero__badge-dot" aria-hidden="true">
           •
@@ -16,22 +16,31 @@ export default function Hero({ onJoinWaitlist }) {
           •
         </span>
         <span>Free Download</span>
-      </div>
+      </FramerMotion>
 
       <div className="hero__content">
         {/* Heading */}
-        <h1 className="hero__title">
-          From the <span className="hero__title--green">margins</span> to the{' '}
-          <span className="hero__title--green">mainstream</span>
-        </h1>
+        <FramerMotion delay={0.2}>
+          <h1 className="hero__title">
+            From the <span className="hero__title--green">margins</span> to the{' '}
+            <span className="hero__title--green">mainstream</span>
+          </h1>
+        </FramerMotion>
 
         {/* Subtitle */}
-        <p className="hero__subtitle">
-          Women who claimed their seats at the Table of Technology
-        </p>
+        <FramerMotion delay={0.3}>
+          <p className="hero__subtitle">
+            Women who claimed their seats at the Table of Technology
+          </p>
+        </FramerMotion>
 
         {/* Stats */}
-        <div className="hero__stats" role="list" aria-label="Book highlights">
+        <FramerMotion
+          delay={0.4}
+          className="hero__stats"
+          role="list"
+          aria-label="Book highlights"
+        >
           <div className="hero__stat" role="listitem">
             <img src="/assets/icons/vector-12.svg" alt="" aria-hidden="true" />
             <span className="hero__stat-number">12</span>
@@ -57,10 +66,10 @@ export default function Hero({ onJoinWaitlist }) {
             <span className="hero__stat-number">Free</span>
             <span className="hero__stat-label">Always</span>
           </div>
-        </div>
+        </FramerMotion>
 
         {/* CTAs */}
-        <div className="hero__ctas">
+        <FramerMotion delay={0.5} className="hero__ctas">
           <Link
             to="/"
             className="hero__cta hero__cta--primary"
@@ -82,7 +91,7 @@ export default function Hero({ onJoinWaitlist }) {
               aria-hidden="true"
             />
           </Link>
-        </div>
+        </FramerMotion>
       </div>
     </section>
   );

@@ -51,27 +51,23 @@ export default function SpotlightNomination() {
     if (isAlready) {
       nextStatus = 'already';
     } else {
-      try {
-        await emailjs.send(
-          NOM_SERVICE_ID,
-          NOM_TEMPLATE_ID,
-          {
-            title: 'New Spotlight Nomination',
-            name: snap.name,
-            role: snap.role,
-            message: `${snap.name} was nominated for the spotlight with role/organisation: ${snap.role} and message: ${snap.message}`,
-            number: snap.number,
-          },
-          NOM_PUBLIC_KEY
-        );
+      await emailjs.send(
+        NOM_SERVICE_ID,
+        NOM_TEMPLATE_ID,
+        {
+          title: 'New Spotlight Nomination',
+          name: snap.name,
+          role: snap.role,
+          message: `${snap.name} was nominated for the spotlight with role/organisation: ${snap.role} and message: ${snap.message}`,
+          number: snap.number,
+        },
+        NOM_PUBLIC_KEY
+      );
 
-        localStorage.setItem(
-          'spotlightNominations',
-          JSON.stringify([...storedNominations, snap])
-        );
-      } catch {
-        nextStatus = 'error';
-      }
+      localStorage.setItem(
+        'spotlightNominations',
+        JSON.stringify([...storedNominations, snap])
+      );
     }
     setStatusType(nextStatus);
     setShowStatusModal(nextStatus !== 'error');
@@ -91,8 +87,8 @@ export default function SpotlightNomination() {
   return (
     <section
       className="spotlight-nomination"
-      aria-labelledby="spotlight-nomination-heading" >
-        
+      aria-labelledby="spotlight-nomination-heading"
+    >
       <FramerMotion className="spotlight-nomination__head" delay={0.1}>
         <img
           src={spotlightNomination.icon}

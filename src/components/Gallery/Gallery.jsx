@@ -1,3 +1,4 @@
+import FramerMotion from '../FramerMotion';
 import './Gallery.css';
 
 function CameraIcon() {
@@ -30,12 +31,10 @@ function CameraIcon() {
 export default function Gallery() {
   return (
     <section className="gallery">
-      <div className="gallery__item">
+      <FramerMotion className="gallery__item" delay={0.2}>
         <CameraIcon />
-        <span className="gallery__item-label">
-          Photos from Past IWD Events
-          </span>
-      </div>
+        <span className="gallery__item-label">Photos from Past IWD Events</span>
+      </FramerMotion>
     </section>
   );
 }

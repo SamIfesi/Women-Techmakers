@@ -1,3 +1,4 @@
+import FramerMotion from '../FramerMotion';
 import { mainEvent, webinarCard } from '../Data/IwdData';
 import './EventDetailCards.css';
 import lightening from '/assets/icons/web-lightening.svg';
@@ -6,7 +7,7 @@ export default function EventDetailCards() {
   return (
     <section className="edc">
       {/* ── Main Event Card ─────────────────────────────────── */}
-      <div className="edc-main">
+      <FramerMotion className="edc-main" delay={0.1}>
         <h2 className="edc-main__heading">{mainEvent.heading}</h2>
 
         <div className="edc-main__rows">
@@ -35,10 +36,10 @@ export default function EventDetailCards() {
         >
           {mainEvent.cta.text}
         </a>
-      </div>
+      </FramerMotion>
 
       {/* ── Pre-Event Webinar Card ───────────────────────────── */}
-      <div className="edc-webinar">
+      <FramerMotion className="edc-webinar" delay={0.3}>
         <div>
           <div className="edc-webinar__badge">
             <img src={lightening} alt="" />
@@ -71,7 +72,7 @@ export default function EventDetailCards() {
         >
           {webinarCard.cta.text}
         </a>
-      </div>
+      </FramerMotion>
     </section>
   );
 }

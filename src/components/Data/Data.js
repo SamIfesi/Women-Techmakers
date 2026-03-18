@@ -63,29 +63,19 @@ export const contributorsData = {
       image: '/assets/img/contributors/Patricia-Oko.png',
     },
     {
-      name: 'Anyika Uchechukwu Lorreta',
-      role: 'Data Engineer & Instructor',
-      image: '/assets/img/contributors/Anyika-Lorreta.jpg',
+      name: 'Chidinma Christabel Ukaegbu',
+      role: 'Senior Product Designer & Design Educator',
+      image: '/assets/img/contributors/Chidinma-Christabel.jpg',
     },
     {
-      name: 'Victoria Soluchukwu Ofuasia',
-      role: 'Researcher & Backend Developer',
-      image: '/assets/img/contributors/Victoria-Ofuasia.jpeg',
-    },
-    {
-      name: 'Oluwabukola Adesina',
-      role: 'Senior QA Engineer & Founder MMIT',
-      image: '/assets/img/contributors/Oluwabukola-Adesina.jpg',
+      name: 'Mojisola Alegbe',
+      role: 'Software Engineer & Founder ENG Tech Community',
+      image: '/assets/img/contributors/Mojisola-Alegbe.png',
     },
     {
       name: 'Eno Peters',
       role: 'Technical Product Manager',
       image: '/assets/img/contributors/Eno-Peters.jpeg',
-    },
-    {
-      name: 'Okwara Munachiso Adaugo',
-      role: 'Product designer',
-      image: '/assets/img/contributors/Okwara-Munachimso.jpeg',
     },
     {
       name: 'Oluwatoyin Mary Oladeji',
@@ -96,6 +86,16 @@ export const contributorsData = {
       name: 'Onuoha Gloria',
       role: 'Social Media Strategist',
       image: '/assets/img/contributors/Onuoha-Gloria.jpeg',
+    },
+    {
+      name: 'Victoria Soluchukwu Ofuasia',
+      role: 'Researcher & Backend Developer',
+      image: '/assets/img/contributors/Victoria-Ofuasia.jpeg',
+    },
+    {
+      name: 'Oluwabukola Adesina',
+      role: 'Senior QA Engineer & Founder MMIT',
+      image: '/assets/img/contributors/Oluwabukola-Adesina.jpg',
     },
     {
       name: 'Godsfavour Ezeliora',
@@ -113,9 +113,14 @@ export const contributorsData = {
       image: '/assets/img/contributors/Jessica-Eze.jpg',
     },
     {
-      name: 'Madubueze Gloria Ifeoma',
-      role: 'Frontend Engineer',
-      image: '/assets/img/contributors/Madubueze-Gloria.jpeg',
+      name: 'Okwara Munachiso Adaugo',
+      role: 'Product designer',
+      image: '/assets/img/contributors/Okwara-Munachimso.jpeg',
+    },
+    {
+      name: 'Anyika Uchechukwu Lorreta',
+      role: 'Data Engineer & Instructor',
+      image: '/assets/img/contributors/Anyika-Lorreta.jpg',
     },
     {
       name: 'Mmesoma Stella Nzeribe',
@@ -123,14 +128,9 @@ export const contributorsData = {
       image: '/assets/img/contributors/Mmesoma-Stella.jpeg',
     },
     {
-      name: 'Mojisola Alegbe',
-      role: 'Software Engineer & Founder ENG Tech Community',
-      image: '/assets/img/contributors/Mojisola-Alegbe.png',
-    },
-    {
-      name: 'Chidinma Christabel Ukaegbu',
-      role: 'Senior Product Designer & Design Educator',
-      image: '/assets/img/contributors/Chidinma-Christabel.jpg',
+      name: 'Madubueze Gloria Ifeoma',
+      role: 'Frontend Engineer',
+      image: '/assets/img/contributors/Madubueze-Gloria.jpeg',
     },
   ],
 };

@@ -12,7 +12,6 @@ export const footerData = {
   description:
     "A curated collection of true stories by women in technology. Published by Women Techmakers Nsukka in celebration of International Women's Day 2026. Free — always and forever.",
   socials: [
-    { label: 'Instagram', icon: '/assets/icons/instagram.svg', href: '#' },
     {
       label: 'Twitter',
       icon: '/assets/icons/twitter.svg',

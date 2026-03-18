@@ -41,6 +41,16 @@
   gap: 1rem;
 }
 
+.contributors__grid > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contributors__grid > div > .contributor-card {
+  height: 100%;
+}
+
 /* ── Tablet — 2 cols, bigger cards ─────────────────────────── */
 @media screen and (min-width: 768px) {
   .contributors {

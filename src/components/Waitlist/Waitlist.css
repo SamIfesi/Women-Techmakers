@@ -43,6 +43,10 @@
 }
 
 /* ── Form ──────────────────────────────────────────────────── */
+.waitlist-form-wrapper {
+  width: 100%;
+}
+
 .waitlist-form {
   width: 100%;
   display: flex;
@@ -253,7 +257,9 @@
   font-weight: 800;
   color: var(--dark-navy);
   background: rgba(255, 255, 255, 0.8);
-  transition: transform 0.15s ease, background-color 0.2s ease;
+  transition:
+    transform 0.15s ease,
+    background-color 0.2s ease;
 }
 
 .waitlist-popup-close:hover {

@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import Navbar from './components/Navbar/Navbar';
-import FramerMotion from './components/FramerMotion';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Chapters from './components/Chapters/Chapters';
@@ -21,28 +20,14 @@ export default function App() {
     <>
       <Navbar />
       <main>
-        <FramerMotion delay={0.3}>
-          <Hero onJoinWaitlist={handleJoinWaitlist} />
-        </FramerMotion>
-        <FramerMotion delay={0.6}>
-          <About />
-        </FramerMotion>
-        <FramerMotion delay={0.8}>
-          <Chapters />
-        </FramerMotion>
-        <FramerMotion delay={0.7}>
-          <Contributors />
-        </FramerMotion>
-        <FramerMotion delay={0.3}>
-          <Events />
-        </FramerMotion>
-        <FramerMotion delay={0.5}>
-          <Waitlist waitlistRef={waitlistRef} />
-        </FramerMotion>
+        <Hero onJoinWaitlist={handleJoinWaitlist} />
+        <About />
+        <Chapters />
+        <Contributors />
+        <Events />
+        <Waitlist waitlistRef={waitlistRef} />
       </main>
-      <FramerMotion delay={0.8}>
-        <Footer />
-      </FramerMotion>
+      <Footer />
     </>
   );
 }

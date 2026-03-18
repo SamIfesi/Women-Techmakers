@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import FramerMotion from '../FramerMotion';
+import NominationModal from './NominationModal';
 import { spotlightNomination } from '../Data/SpotlightData';
 import './SpotlightNomination.css';
 
@@ -23,6 +24,7 @@ export default function SpotlightNomination() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    let nextStatus = 'success';
 
     const trimmedName = name.trim();
     const trimmedRole = role.trim();
@@ -47,7 +49,7 @@ export default function SpotlightNomination() {
           nom.role.toLowerCase() === trimmedRole.toLowerCase()
       );
     if (isAlready) {
-      setStatusType('already');
+      nextStatus = 'already';
     } else {
       try {
         await emailjs.send(
@@ -67,12 +69,12 @@ export default function SpotlightNomination() {
           'spotlightNominations',
           JSON.stringify([...storedNominations, snap])
         );
-        setStatusType('success');
       } catch {
-        setStatusType('error');
+        nextStatus = 'error';
       }
     }
-    setShowStatusModal(true);
+    setStatusType(nextStatus);
+    setShowStatusModal(nextStatus !== 'error');
     setName('');
     setRole('');
     setMessage('');
@@ -89,8 +91,8 @@ export default function SpotlightNomination() {
   return (
     <section
       className="spotlight-nomination"
-      aria-labelledby="spotlight-nomination-heading"
-    >
+      aria-labelledby="spotlight-nomination-heading" >
+        
       <FramerMotion className="spotlight-nomination__head" delay={0.1}>
         <img
           src={spotlightNomination.icon}
@@ -170,13 +172,9 @@ export default function SpotlightNomination() {
             {spotlightNomination.submitText}
           </button>
 
-          {showStatusModal && (
+          {statusType === 'error' && (
             <p className="spotlight-nomination__deadline" role="status">
-              {statusType === 'success'
-                ? `Nomination submitted for ${submitted.name}.`
-                : statusType === 'already'
-                  ? `${submitted.name} (${submitted.role}) is already nominated.`
-                  : 'Could not submit nomination. Please try again.'}
+              Could not submit nomination. Please try again.
             </p>
           )}
 
@@ -185,6 +183,13 @@ export default function SpotlightNomination() {
           </p>
         </form>
       </FramerMotion>
+
+      <NominationModal
+        show={showStatusModal}
+        type={statusType}
+        name={submitted.name}
+        role={submitted.role}
+      />
     </section>
   );
 }

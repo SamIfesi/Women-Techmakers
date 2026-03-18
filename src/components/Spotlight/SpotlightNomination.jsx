@@ -1,11 +1,90 @@
+import { useEffect, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import FramerMotion from '../FramerMotion';
 import { spotlightNomination } from '../Data/SpotlightData';
 import './SpotlightNomination.css';
 
 export default function SpotlightNomination() {
-  function handleSubmit(event) {
+  const NOM_SERVICE_ID = import.meta.env.VITE_NOM_SERVICE_ID;
+  const NOM_TEMPLATE_ID = import.meta.env.VITE_NOM_TEMPLATE_ID;
+  const NOM_PUBLIC_KEY = import.meta.env.VITE_NOM_PUBLIC_KEY;
+
+  const [name, setName] = useState('');
+  const [role, setRole] = useState('');
+  const [message, setMessage] = useState('');
+  const [number, setNumber] = useState('');
+  const [showStatusModal, setShowStatusModal] = useState(false);
+  const [statusType, setStatusType] = useState('success');
+  const [submitted, setSubmitted] = useState({ name: '', role: '' });
+  const timerRef = useRef(null);
+
+  const canSubmit =
+    name.trim() !== '' && role.trim() !== '' && message.trim() !== '';
+
+  async function handleSubmit(event) {
     event.preventDefault();
+
+    const trimmedName = name.trim();
+    const trimmedRole = role.trim();
+    const trimmedMessage = message.trim();
+    const trimmedNumber = number.trim();
+
+    const snap = {
+      name: trimmedName,
+      role: trimmedRole,
+      message: trimmedMessage,
+      number: trimmedNumber,
+    };
+    setSubmitted(snap);
+
+    const storeDatas = localStorage.getItem('spotlightNominations');
+    const storedNominations = storeDatas ? JSON.parse(storeDatas) : [];
+    const isAlready =
+      storeDatas !== null &&
+      storedNominations.some(
+        (nom) =>
+          nom.name.toLowerCase() === trimmedName.toLowerCase() &&
+          nom.role.toLowerCase() === trimmedRole.toLowerCase()
+      );
+    if (isAlready) {
+      setStatusType('already');
+    } else {
+      try {
+        await emailjs.send(
+          NOM_SERVICE_ID,
+          NOM_TEMPLATE_ID,
+          {
+            title: 'New Spotlight Nomination',
+            name: snap.name,
+            role: snap.role,
+            message: `${snap.name} was nominated for the spotlight with role/organisation: ${snap.role} and message: ${snap.message}`,
+            number: snap.number,
+          },
+          NOM_PUBLIC_KEY
+        );
+
+        localStorage.setItem(
+          'spotlightNominations',
+          JSON.stringify([...storedNominations, snap])
+        );
+        setStatusType('success');
+      } catch {
+        setStatusType('error');
+      }
+    }
+    setShowStatusModal(true);
+    setName('');
+    setRole('');
+    setMessage('');
+    setNumber('');
   }
+
+  useEffect(() => {
+    if (showStatusModal) {
+      timerRef.current = setTimeout(() => setShowStatusModal(false), 5000);
+    }
+    return () => clearTimeout(timerRef.current);
+  }, [showStatusModal]);
 
   return (
     <section
@@ -51,6 +130,8 @@ export default function SpotlightNomination() {
                   id={field.id}
                   className="spotlight-nomination__input spotlight-nomination__input--textarea"
                   placeholder={field.placeholder}
+                  value={field.id === 'nominee-why' ? message : ''}
+                  onChange={(event) => setMessage(event.target.value)}
                   required={field.required}
                 />
               ) : (
@@ -59,15 +140,45 @@ export default function SpotlightNomination() {
                   type={field.type}
                   className="spotlight-nomination__input"
                   placeholder={field.placeholder}
+                  value={
+                    field.id === 'nominee-name'
+                      ? name
+                      : field.id === 'nominee-role'
+                        ? role
+                        : number
+                  }
+                  onChange={(event) => {
+                    if (field.id === 'nominee-name') {
+                      setName(event.target.value);
+                    } else if (field.id === 'nominee-role') {
+                      setRole(event.target.value);
+                    } else {
+                      setNumber(event.target.value);
+                    }
+                  }}
                   required={field.required}
                 />
               )}
             </div>
           ))}
 
-          <button type="submit" className="spotlight-nomination__cta">
+          <button
+            type="submit"
+            className="spotlight-nomination__cta"
+            disabled={!canSubmit}
+          >
             {spotlightNomination.submitText}
           </button>
+
+          {showStatusModal && (
+            <p className="spotlight-nomination__deadline" role="status">
+              {statusType === 'success'
+                ? `Nomination submitted for ${submitted.name}.`
+                : statusType === 'already'
+                  ? `${submitted.name} (${submitted.role}) is already nominated.`
+                  : 'Could not submit nomination. Please try again.'}
+            </p>
+          )}
 
           <p className="spotlight-nomination__deadline">
             {spotlightNomination.deadlineText}

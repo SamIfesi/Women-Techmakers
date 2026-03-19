@@ -88,9 +88,9 @@ export const contributorsData = {
       image: '/assets/img/contributors/Onuoha-Gloria.jpeg',
     },
     {
-      name: 'Victoria Soluchukwu Ofuasia',
-      role: 'Researcher & Backend Developer',
-      image: '/assets/img/contributors/Victoria-Ofuasia.jpeg',
+      name: 'Imaabasi Aniema',
+      role: 'Virtual Assistant & Cybersecurity Analyst',
+      image: '/assets/img/contributors/Imaabasi-Aniema.png',
     },
     {
       name: 'Oluwabukola Adesina',
@@ -98,14 +98,14 @@ export const contributorsData = {
       image: '/assets/img/contributors/Oluwabukola-Adesina.jpg',
     },
     {
+      name: 'Victoria Soluchukwu Ofuasia',
+      role: 'Researcher & Backend Developer',
+      image: '/assets/img/contributors/Victoria-Ofuasia.jpeg',
+    },
+    {
       name: 'Godsfavour Ezeliora',
       role: 'Research business analyst',
       image: '/assets/img/contributors/Godsfavour-Ezeliora.jpg',
-    },
-    {
-      name: 'Imaabasi Aniema',
-      role: 'Virtual Assistant & Cybersecurity Analyst',
-      image: '/assets/img/contributors/Imaabasi-Aniema.png',
     },
     {
       name: 'Jessica Eze',
@@ -149,7 +149,7 @@ export const eventsData = {
       panelists: '3 Panelists',
       date: '9th March 2026',
       time: '7:00PM GMT+1',
-      link: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/',
+      link: 'https://luma.com/5vppqueh',
       image: '/assets/img/flyer-1.png',
     },
     {

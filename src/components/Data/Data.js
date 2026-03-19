@@ -59,7 +59,7 @@ export const contributorsData = {
   contributors: [
     {
       name: 'Patricia Oko',
-      role: 'Curator/Editor & Lead Contributor',
+      role: 'Curator/Editor',
       image: '/assets/img/contributors/Patricia-Oko.png',
     },
     {
@@ -96,6 +96,11 @@ export const contributorsData = {
       name: 'Oluwabukola Adesina',
       role: 'Senior QA Engineer & Founder MMIT',
       image: '/assets/img/contributors/Oluwabukola-Adesina.jpg',
+    },
+    {
+      name: 'Helen Okereke',
+      role: null,
+      image: '/assets/img/contributors/Helen-Okereke.jpg',
     },
     {
       name: 'Victoria Soluchukwu Ofuasia',

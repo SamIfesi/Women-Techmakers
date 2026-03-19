@@ -17,35 +17,42 @@ export const coreTeam = {
       role: 'Lead Organiser & Book Editor',
       image: '/assets/img/teams/Patricia-Oko.png',
     },
+    
+    {
+      initials: 'HO',
+      name: 'Helen Okereke',
+      role: 'WTM Ambassador',
+      image: '/assets/img/teams/Helen-Okereke.jpg',
+    },
     {
       initials: 'TM',
       name: 'Chukwuemeka Chidimma Faith',
       role: 'Graphic Designer',
       image: '/assets/img/teams/Chukwuemeka-Faith.jpg',
-
     },
     {
       initials: 'TM',
       name: 'Okwara Munachiso Adaugo',
       role: 'Product Designer',
-      image: '/assets/img/teams/Okwara-Munachimso.jpeg', 
+      image: '/assets/img/teams/Okwara-Munachimso.jpeg',
     },
     {
       initials: 'TM',
       name: 'Stephen Joan Nneoma',
       role: 'Community Manager',
-      image: '/assets/img/teams/Stephen-Joan.jpg', 
+      image: '/assets/img/teams/Stephen-Joan.jpg',
     },
     {
       initials: 'TM',
       name: 'Ihuoma N. Obasi',
       role: 'Communication Lead',
-      image: "/assets/img/teams/Ihuoma-Obasi.jpg", 
-    },{
+      image: '/assets/img/teams/Ihuoma-Obasi.jpg',
+    },
+    {
       initials: 'TM',
       name: 'Jessica Eze',
       role: 'Partnership Manager',
-      image: '/assets/img/teams/Jessica-Eze.jpg', 
+      image: '/assets/img/teams/Jessica-Eze.jpg',
     },
   ],
 };
@@ -91,8 +98,8 @@ export const volunteers = {
     },
     {
       initials: 'UU',
-      name: 'Unknown',
-      image: '/assets/img/voluteers/Unknown.jpg',
+      name: 'Ruth Ozioma',
+      image: '/assets/img/voluteers/Ruth-Ozioma.jpg',
     },
   ],
 };

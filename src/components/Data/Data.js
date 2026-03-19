@@ -98,11 +98,6 @@ export const contributorsData = {
       image: '/assets/img/contributors/Oluwabukola-Adesina.jpg',
     },
     {
-      name: 'Helen Okereke',
-      role: null,
-      image: '/assets/img/contributors/Helen-Okereke.jpg',
-    },
-    {
       name: 'Victoria Soluchukwu Ofuasia',
       role: 'Researcher & Backend Developer',
       image: '/assets/img/contributors/Victoria-Ofuasia.jpeg',

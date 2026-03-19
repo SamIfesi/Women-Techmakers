@@ -42,8 +42,9 @@ export default function WaitlistPopup({
     const snap = { name: name.trim(), email: trimmedEmail };
     setSubmitted(snap);
 
-    const storedEmail = localStorage.getItem(storageKey);
-    const isAlready = storedEmail !== null && trimmedEmail === storedEmail.toLowerCase();
+    const storedData = localStorage.getItem(storageKey);
+    const storedList = storedData ? JSON.parse(storedData) : [];
+    const isAlready = storedList.some((item) => item.email.toLowerCase() === trimmedEmail);
 
     if (isAlready) {
       setStatusType('already');
@@ -61,7 +62,8 @@ export default function WaitlistPopup({
       //   EJS_PUBLIC_KEY
       // );
       // ────────────────────────────────────────────────────────────────────
-      localStorage.setItem(storageKey, trimmedEmail);
+      const updatedList = [...storedList, snap];
+      localStorage.setItem(storageKey, JSON.stringify(updatedList));
       setStatusType('success');
     }
 

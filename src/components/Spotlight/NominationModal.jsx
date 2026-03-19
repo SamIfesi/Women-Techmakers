@@ -1,14 +1,15 @@
 import { AnimatePresence, motion as Motion } from 'framer-motion';
+import err from '/assets/icons/error.svg';
 import '../Waitlist/Waitlist.css';
 
 /**
  * Reusable nomination confirmation modal.
  *
  * Props:
- *   show   {boolean}             — whether to render the modal
- *   type   {'success'|'already'} — which message variant to show
- *   name   {string}              — nominee name
- *   role   {string}              — nominee role/organisation
+ *   show   {boolean}                    — whether to render the modal
+ *   type   {'success'|'already'|'error'} — which message variant to show
+ *   name   {string}                     — nominee name
+ *   role   {string}                     — nominee role/organisation
  */
 export default function NominationModal({
   show,
@@ -17,6 +18,7 @@ export default function NominationModal({
   role = '',
 }) {
   const isAlready = type === 'already';
+  const isError = type === 'error';
 
   return (
     <AnimatePresence>
@@ -36,10 +38,17 @@ export default function NominationModal({
             transition={{ type: 'spring', stiffness: 280, damping: 22 }}
           >
             <div className="wl-modal-icon" aria-hidden="true">
-              ✓
+              {isError ? <img src={err} alt="Error" /> : '✓'}
             </div>
 
-            {isAlready ? (
+            {isError ? (
+              <>
+                <p className="wl-modal-text">Request Could Not Be Completed</p>
+                <p className="wl-modal-sub">
+                  Your request could not be completed at this time. Please try again later.
+                </p>
+              </>
+            ) : isAlready ? (
               <>
                 <p className="wl-modal-text">Already nominated!</p>
                 <p className="wl-modal-sub">

@@ -51,26 +51,31 @@ export default function SpotlightNomination() {
     if (isAlready) {
       nextStatus = 'already';
     } else {
-      await emailjs.send(
-        NOM_SERVICE_ID,
-        NOM_TEMPLATE_ID,
-        {
-          title: 'New Spotlight Nomination',
-          name: snap.name,
-          role: snap.role,
-          message: `${snap.name} was nominated for the spotlight with role/organisation: ${snap.role} and message: ${snap.message}`,
-          number: snap.number,
-        },
-        NOM_PUBLIC_KEY
-      );
+      try {
+        await emailjs.send(
+          NOM_SERVICE_ID,
+          NOM_TEMPLATE_ID,
+          {
+            title: 'New Spotlight Nomination',
+            name: snap.name,
+            role: snap.role,
+            message: `${snap.name} was nominated for the spotlight with role/organisation: ${snap.role} and message: ${snap.message}`,
+            number: snap.number,
+          },
+          NOM_PUBLIC_KEY
+        );
 
-      localStorage.setItem(
-        'spotlightNominations',
-        JSON.stringify([...storedNominations, snap])
-      );
+        localStorage.setItem(
+          'spotlightNominations',
+          JSON.stringify([...storedNominations, snap])
+        );
+      } catch (error) {
+        console.error('Email sending failed:', error);
+        nextStatus = 'error';
+      }
     }
     setStatusType(nextStatus);
-    setShowStatusModal(nextStatus !== 'error');
+    setShowStatusModal(true);
     setName('');
     setRole('');
     setMessage('');
@@ -79,7 +84,7 @@ export default function SpotlightNomination() {
 
   useEffect(() => {
     if (showStatusModal) {
-      timerRef.current = setTimeout(() => setShowStatusModal(false), 5000);
+      timerRef.current = setTimeout(() => setShowStatusModal(false), 500000);
     }
     return () => clearTimeout(timerRef.current);
   }, [showStatusModal]);

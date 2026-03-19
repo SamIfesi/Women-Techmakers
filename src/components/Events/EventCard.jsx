@@ -39,8 +39,7 @@ export default function EventCard({
             </span>
           ))}
         </p>
-      </div>
-
+        
       {/* CTA */}
       <Link
         to={link}
@@ -55,6 +54,8 @@ export default function EventCard({
           →
         </span>
       </Link>
+      </div>
+
     </article>
   );
 }

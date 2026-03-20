@@ -1,4 +1,9 @@
 import { Link } from 'react-router';
+import bookcover from '/assets/img/bookcover.png';
+import vector12 from '/assets/icons/vector-12.svg';
+import vector6 from '/assets/icons/vector-6.svg';
+import vectorPrimary from '/assets/icons/Vector-cta-primary.svg';
+import vectorSec from '/assets/icons/vector-cta-sec.svg';
 import FramerMotion from '../FramerMotion';
 import './Hero.css';
 
@@ -18,17 +23,23 @@ export default function Hero({ onJoinWaitlist }) {
         <span>Free Download</span>
       </FramerMotion>
 
+      <FramerMotion delay={0.6} className="hero__bookcover-wrap">
+        <img
+          src={bookcover}
+          alt="Book cover for From the Margins to the Mainstream"
+          className="hero__bookcover"
+        />
+      </FramerMotion>
+
       <div className="hero__content">
         {/* Heading */}
-        <FramerMotion delay={0.2}>
+        <FramerMotion delay={0.3}>
           <h1 className="hero__title">
             From the <span className="hero__title--green">margins</span> to the{' '}
             <span className="hero__title--green">mainstream</span>
           </h1>
-        </FramerMotion>
 
-        {/* Subtitle */}
-        <FramerMotion delay={0.3}>
+          {/* Subtitle */}
           <p className="hero__subtitle">
             Women who claimed their seats at the Table of Technology
           </p>
@@ -42,7 +53,7 @@ export default function Hero({ onJoinWaitlist }) {
           aria-label="Book highlights"
         >
           <div className="hero__stat" role="listitem">
-            <img src="/assets/icons/vector-12.svg" alt="" aria-hidden="true" />
+            <img src={vector12} alt="" aria-hidden="true" />
             <span className="hero__stat-number">12</span>
             <span className="hero__stat-label">Contributors</span>
           </div>
@@ -50,7 +61,7 @@ export default function Hero({ onJoinWaitlist }) {
           <div className="hero__stat-divider" aria-hidden="true" />
 
           <div className="hero__stat" role="listitem">
-            <img src="/assets/icons/vector-6.svg" alt="" aria-hidden="true" />
+            <img src={vector6} alt="" aria-hidden="true" />
             <span className="hero__stat-number">6</span>
             <span className="hero__stat-label">Chapters</span>
           </div>
@@ -77,19 +88,11 @@ export default function Hero({ onJoinWaitlist }) {
             onClick={onJoinWaitlist}
           >
             Join the Waitlist
-            <img
-              src="/assets/icons/Vector-cta-primary.svg"
-              alt=""
-              aria-hidden="true"
-            />
+            <img src={vectorPrimary} alt="" aria-hidden="true" />
           </Link>
           <Link to="/About" className="hero__cta hero__cta--secondary">
             Learn More
-            <img
-              src="/assets/icons/vector-cta-sec.svg"
-              alt=""
-              aria-hidden="true"
-            />
+            <img src={vectorSec} alt="" aria-hidden="true" />
           </Link>
         </FramerMotion>
       </div>

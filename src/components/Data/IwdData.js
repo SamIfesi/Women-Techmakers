@@ -91,6 +91,6 @@ export const webinarCard = {
   ],
   cta: {
     text: 'Register for Webinar',
-    link: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/',
+    link: 'https://luma.com/5vppqueh',
   },
 };

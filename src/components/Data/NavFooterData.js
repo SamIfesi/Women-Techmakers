@@ -47,7 +47,7 @@ export const footerData = {
       },
       {
         label: 'Join the Pre-Event Webinar',
-        href: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/',
+        href: 'https://luma.com/5vppqueh',
       },
     ],
   },

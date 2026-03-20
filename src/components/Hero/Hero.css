@@ -56,6 +56,12 @@
 }
 
 /* ── Title ──────────────────────────────────────────────────── */
+.hero__intro-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
 .hero__title {
   font-family: var(--font-coolvetica);
   font-size: clamp(1.5rem, 11vw, 3.5rem);

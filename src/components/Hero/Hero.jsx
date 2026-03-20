@@ -33,7 +33,7 @@ export default function Hero({ onJoinWaitlist }) {
 
       <div className="hero__content">
         {/* Heading */}
-        <FramerMotion delay={0.3}>
+        <FramerMotion delay={0.3} className='hero__intro-texts'>
           <h1 className="hero__title">
             From the <span className="hero__title--green">margins</span> to the{' '}
             <span className="hero__title--green">mainstream</span>

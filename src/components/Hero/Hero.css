@@ -177,7 +177,6 @@
 
 .hero__bookcover-wrap {
   width: 100%;
-  transition: transform .3s ease;
 }
 
 .hero__bookcover {
@@ -186,10 +185,6 @@
   max-width: 680px;
   margin: 0 auto;
   border-radius: 1.5rem;
-}
-
-.hero__bookcover-wrap:hover img {
-  transform: scale(1.05)
 }
 
 /* ============================================================

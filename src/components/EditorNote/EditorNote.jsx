@@ -13,7 +13,16 @@ export default function EditorNote() {
         <h2 className="editor-note__heading" id="editor-note-heading">
           {editorNote.title}
         </h2>
-        <p className="editor-note__quote">{editorNote.quote}</p>
+        <p className="editor-note__quote">
+          {editorNote.img && (
+            <img
+              src={editorNote.img}
+              alt={editorNote.author}
+              className="editor-note__author-img"
+            />
+          )}
+          {editorNote.quote}
+        </p>
         <p className="editor-note__attribution">
           &mdash; {editorNote.author}, {editorNote.role}
         </p>

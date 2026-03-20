@@ -28,7 +28,7 @@
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--dark-navy);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 /* ── Quote body ─────────────────────────────────────────────── */
@@ -38,6 +38,16 @@
   color: var(--dark-text);
   line-height: 1.75;
   margin-bottom: 1.5rem;
+}
+
+.editor-note__author-img {
+  float: left;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  shape-outside: circle(50%);
+  margin: 0.2rem 0.9rem 0.35rem 0;
 }
 
 /* ── Attribution ────────────────────────────────────────────── */
@@ -70,6 +80,12 @@
   .editor-note__quote {
     font-size: 1.0625rem;
   }
+
+  .editor-note__author-img {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: 1rem;
+  }
 }
 
 /* ============================================================
@@ -95,6 +111,11 @@
   .editor-note__quote {
     font-size: 1.125rem;
     line-height: 1.8;
+  }
+
+  .editor-note__author-img {
+    width: 6rem;
+    height: 6rem;
   }
 
   .editor-note__attribution {

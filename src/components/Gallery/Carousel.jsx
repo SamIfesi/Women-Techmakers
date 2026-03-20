@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { motion as Motion } from 'framer-motion';
-import { Carosel } from '../Data/Carosel';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
+import { CarouselImg } from '../Data/Carousel';
 import './Carousel.css';
 
 export default function Carousel() {
@@ -9,8 +9,9 @@ export default function Carousel() {
   const scrollTimeout = useRef(null);
   const containerRef = useRef(null);
   const isScrolling = useRef(false);
+  const touchStartX = useRef(null); // stores where the finger first touched
 
-  const slideCount = Carosel.length;
+  const slideCount = CarouselImg.length;
 
   const paginate = (newDirection) => {
     if (isScrolling.current) return;
@@ -24,7 +25,7 @@ export default function Carousel() {
     if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
     scrollTimeout.current = setTimeout(() => {
       isScrolling.current = false;
-    }, 3000);
+    }, 800);
   };
 
   const handleWheel = (e) => {
@@ -36,6 +37,23 @@ export default function Carousel() {
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowRight') paginate(1);
     if (e.key === 'ArrowLeft') paginate(-1);
+  };
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+
+    if (Math.abs(diff) > 50) {
+      // 50px swipe threshold
+      paginate(diff > 0 ? 1 : -1);
+    }
+
+    touchStartX.current = null;
   };
 
   useEffect(() => {
@@ -54,19 +72,19 @@ export default function Carousel() {
     };
   }, [slideCount]);
 
-  // Auto-advance every 3 seconds
+  // Auto-advance every 8 seconds
   useEffect(() => {
     const autoAdvanceTimer = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slideCount);
-    }, 3000);
+    }, 8000);
 
     return () => clearInterval(autoAdvanceTimer);
   }, [slideCount]);
 
   const slideVariants = {
     enter: (direction) => ({
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? '100%' : '-100%',
     }),
     center: {
       zIndex: 1,
@@ -74,29 +92,35 @@ export default function Carousel() {
     },
     exit: (direction) => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? '100%' : '-100%',
     }),
   };
 
   return (
     <div className="carousel" ref={containerRef}>
-      <div className="carousel__container">
-        <Motion.div
-          key={currentIndex}
-          custom={direction}
-          variants={slideVariants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{ duration: 8, type: 'tween' }}
-          className="carousel__slide"
-        >
-          <img
-            src={Carosel[currentIndex].img}
-            alt={Carosel[currentIndex].alt}
-            className="carousel__image"
-          />
-        </Motion.div>
+      <div
+        className="carousel__container"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <AnimatePresence initial={false} custom={direction}>
+          <Motion.div
+            key={currentIndex}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.5, type: 'tween', ease: 'easeInOut' }}
+            className="carousel__slide"
+          >
+            <img
+              src={CarouselImg[currentIndex].img}
+              alt={CarouselImg[currentIndex].alt}
+              className="carousel__image"
+            />
+          </Motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

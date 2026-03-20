@@ -28,6 +28,7 @@ export const bookStory = {
 
 export const editorNote = {
   title: "Editor's Note",
+  img: '/assets/img/Patricia-Oko.png',
   quote:
     '"This book exists because representation matters, but so does documentation. Every woman in technology has a story that could change someone\'s life — if only it were told. This book is our attempt to make sure these stories don\'t stay in private conversations and closed circles. They deserve to be read. They deserve to be shared. They deserve to be mainstream."',
   author: 'Patricia Oko',

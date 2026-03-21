@@ -19,42 +19,51 @@ export default function Waitlist({ waitlistRef }) {
   const [submitted, setSubmitted] = useState({ name: '', email: '' });
   const timerRef = useRef(null);
 
-  // Button is only active when both fields have content
-  const canSubmit = name.trim() !== '' && email.trim() !== '';
+  // Button is only active when both fields have content and email is valid
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const canSubmit = name.trim() !== '' && email.trim() !== '' && EMAIL_REGEX.test(email.trim());
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+    let nextStatus = 'success';
 
-    const snap = { name, email };
+    const snap = {
+      name: name.trim(),
+      email: email.trim().toLowerCase(),
+    };
     setSubmitted(snap);
 
-    const storedEmail = localStorage.getItem('wl_email');
-    const storedDatas = storedEmail ? JSON.parse(storedEmail) : [];
-    const isAlready =
-      storedEmail !== null &&
-      storedDatas.some(
-        (item) => item.email.toLowerCase() === email.trim().toLowerCase()
+    try {
+      const storedEmail = localStorage.getItem('wl_email');
+      const storedDatas = storedEmail ? JSON.parse(storedEmail) : [];
+      const isAlready = storedDatas.some(
+        (item) => item?.email?.toLowerCase?.() === snap.email
       );
-    if (isAlready) {
-      setModalType('already');
-    } else {
-      // ── EmailJS send — uncomment at launch ──────────────────────────────
-      emailjs.send(
-        EJS_SERVICE_ID,
-        EJS_TEMPLATE_ID,
-        {
-          title: 'New Waitlist Signup',
-          name: snap.name,
-          email: snap.email,
-          message: `${snap.name} joined the waitlist with email: ${snap.email}`,
-        },
-        EJS_PUBLIC_KEY
-      );
-      // ────────────────────────────────────────────────────────────────────
-      localStorage.setItem('wl_email', JSON.stringify([...storedDatas, snap]));
-      setModalType('success');
+
+      if (isAlready) {
+        nextStatus = 'already';
+      } else {
+        // ── EmailJS send — uncomment at launch ──────────────────────────────
+        await emailjs.send(
+          EJS_SERVICE_ID,
+          EJS_TEMPLATE_ID,
+          {
+            title: 'New Waitlist Signup',
+            name: snap.name,
+            email: snap.email,
+            message: `${snap.name} joined the waitlist with email: ${snap.email}`,
+          },
+          EJS_PUBLIC_KEY
+        );
+        // ────────────────────────────────────────────────────────────────────
+        localStorage.setItem('wl_email', JSON.stringify([...storedDatas, snap]));
+      }
+    } catch (error) {
+      console.error('Waitlist submission failed:', error);
+      nextStatus = 'error';
     }
 
+    setModalType(nextStatus);
     setShowModal(true);
     setName('');
     setEmail('');
@@ -67,6 +76,18 @@ export default function Waitlist({ waitlistRef }) {
     }
     return () => clearTimeout(timerRef.current);
   }, [showModal]);
+
+  // One-time cleanup: remove only waitlist data and never run again.
+  useEffect(() => {
+    const CLEANUP_FLAG_KEY = 'wl_cleanup_done_v1';
+    const hasRunCleanup = localStorage.getItem(CLEANUP_FLAG_KEY) === '1';
+
+    if (hasRunCleanup) return;
+
+    localStorage.removeItem('wl_email');
+    localStorage.setItem(CLEANUP_FLAG_KEY, '1');
+    console.info('One-time waitlist localStorage cleanup completed.');
+  }, []);
 
   return (
     <>

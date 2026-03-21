@@ -1,14 +1,15 @@
 import { AnimatePresence, motion as Motion } from 'framer-motion';
+import err from '/assets/icons/error.svg';
 import './Waitlist.css';
 
 /**
  * Reusable waitlist confirmation modal.
  *
  * Props:
- *   show   {boolean}             — whether to render the modal
- *   type   {'success'|'already'} — which message variant to show
- *   name   {string}              — the submitter's name
- *   email  {string}              — the submitter's email
+ *   show   {boolean}                    — whether to render the modal
+ *   type   {'success'|'already'|'error'} — which message variant to show
+ *   name   {string}                     — the submitter's name
+ *   email  {string}                     — the submitter's email
  *
  * Usage example (from any component):
  *   <WaitlistModal show={open} type="success" name={name} email={email} />
@@ -20,6 +21,7 @@ export default function WaitlistModal({
   email = '',
 }) {
   const isAlready = type === 'already';
+  const isError = type === 'error';
 
   return (
     <AnimatePresence>
@@ -39,10 +41,17 @@ export default function WaitlistModal({
             transition={{ type: 'spring', stiffness: 280, damping: 22 }}
           >
             <div className="wl-modal-icon" aria-hidden="true">
-              ✓
+              {isError ? <img src={err} alt="Error" /> : '✓'}
             </div>
 
-            {isAlready ? (
+            {isError ? (
+              <>
+                <p className="wl-modal-text">Request Could Not Be Completed</p>
+                <p className="wl-modal-sub">
+                  Your request could not be completed at this time. Please try again later.
+                </p>
+              </>
+            ) : isAlready ? (
               <>
                 <p className="wl-modal-text">Already on the list!</p>
                 <p className="wl-modal-sub">

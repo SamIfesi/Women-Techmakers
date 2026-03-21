@@ -24,7 +24,8 @@ export default function WaitlistPopup({
   const EJS_TEMPLATE_ID = import.meta.env.VITE_EJS_TEMPLATE_ID;
   const EJS_PUBLIC_KEY = import.meta.env.VITE_EJS_PUBLIC_KEY;
 
-  const canSubmit = name.trim() !== '' && email.trim() !== '';
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const canSubmit = name.trim() !== '' && email.trim() !== '' && EMAIL_REGEX.test(email.trim());
 
   function openFormModal(event) {
     event.preventDefault();
@@ -35,38 +36,48 @@ export default function WaitlistPopup({
     setIsFormOpen(false);
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
+    let nextStatus = 'success';
 
-    const trimmedEmail = email.trim().toLowerCase();
-    const snap = { name: name.trim(), email: trimmedEmail };
+    const snap = {
+      name: name.trim(),
+      email: email.trim().toLowerCase(),
+    };
     setSubmitted(snap);
 
-    const storedData = localStorage.getItem(storageKey);
-    const storedList = storedData ? JSON.parse(storedData) : [];
-    const isAlready = storedList.some((item) => item.email.toLowerCase() === trimmedEmail);
-
-    if (isAlready) {
-      setStatusType('already');
-    } else {
-      // ── EmailJS send — uncomment at launch ──────────────────────────────
-      emailjs.send(
-        EJS_SERVICE_ID,
-        EJS_TEMPLATE_ID,
-        {
-          title: 'New Waitlist Signup',
-          name: snap.name,
-          email: snap.email,
-          message: `${snap.name} joined the waitlist with email: ${snap.email}`,
-        },
-        EJS_PUBLIC_KEY
+    try {
+      const storedData = localStorage.getItem(storageKey);
+      const storedList = storedData ? JSON.parse(storedData) : [];
+      const isAlready = storedList.some(
+        (item) => item?.email?.toLowerCase?.() === snap.email
       );
-      // ────────────────────────────────────────────────────────────────────
-      const updatedList = [...storedList, snap];
-      localStorage.setItem(storageKey, JSON.stringify(updatedList));
-      setStatusType('success');
+
+      if (isAlready) {
+        nextStatus = 'already';
+      } else {
+        // ── EmailJS send — uncomment at launch ──────────────────────────────
+        await emailjs.send(
+          EJS_SERVICE_ID,
+          EJS_TEMPLATE_ID,
+          {
+            title: 'New Waitlist Signup',
+            name: snap.name,
+            email: snap.email,
+            message: `${snap.name} joined the waitlist with email: ${snap.email}`,
+          },
+          EJS_PUBLIC_KEY
+        );
+        // ────────────────────────────────────────────────────────────────────
+        const updatedList = [...storedList, snap];
+        localStorage.setItem(storageKey, JSON.stringify(updatedList));
+      }
+    } catch (error) {
+      console.error('Waitlist submission failed:', error);
+      nextStatus = 'error';
     }
 
+    setStatusType(nextStatus);
     setIsFormOpen(false);
     setShowStatusModal(true);
     setName('');

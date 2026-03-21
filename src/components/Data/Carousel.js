@@ -12,5 +12,7 @@ export const CarouselImg = [
   {img: '/assets/img/carousel/carousel10.jpg', alt: 'Carousel Image 10'},
   {img: '/assets/img/carousel/carousel11.jpg', alt: 'Carousel Image 11'},
   {img: '/assets/img/carousel/carousel12.jpg', alt: 'Carousel Image 12'},
+  {img: '/assets/img/carousel/carousel13.jpg', alt: 'Carousel Image 13'},
+  {img: '/assets/img/carousel/carousel14.jpg', alt: 'Carousel Image 14'},
 
 ]

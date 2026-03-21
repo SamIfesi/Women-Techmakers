@@ -17,7 +17,7 @@ export const coreTeam = {
       role: 'Lead Organiser & Book Editor',
       image: '/assets/img/teams/Patricia-Oko.png',
     },
-    
+
     {
       initials: 'HO',
       name: 'Helen Okereke',
@@ -62,14 +62,29 @@ export const volunteers = {
   subtitle: 'The incredible people who supported the event',
   members: [
     {
-      initials: 'JO',
-      name: 'Josephine Chidimma Orji',
-      image: '/assets/img/voluteers/Chidimma-Orji.jpg',
+      initials: 'EI',
+      name: 'Eke Ifesinachi Samrose',
+      image: '/assets/img/voluteers/Samrose.png',
+    },
+    {
+      initials: 'LO',
+      name: 'Lydia Oduada',
+      image: '/assets/img/voluteers/Lydia-Oduada.jpg',
+    },
+    {
+      initials: 'BR',
+      name: 'Bello Risikat',
+      image: '/assets/img/voluteers/Bello-Risikat.jpg',
     },
     {
       initials: 'IC',
       name: 'Igwe Chinonso Favour',
       image: '/assets/img/voluteers/Igwe-Favour.jpg',
+    },
+    {
+      initials: 'JO',
+      name: 'Josephine Chidimma Orji',
+      image: '/assets/img/voluteers/Chidimma-Orji.jpg',
     },
     {
       initials: 'OR',
@@ -97,7 +112,7 @@ export const volunteers = {
       image: '/assets/img/voluteers/Chidimma-Faith.jpg',
     },
     {
-      initials: 'UU',
+      initials: 'RO',
       name: 'Ruth Ozioma',
       image: '/assets/img/voluteers/Ruth-Ozioma.jpg',
     },

@@ -1,22 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
 import WaitlistModal from './WaitlistModal';
-import FormWaitlist from './FormWaitlist'
-
-// ── EmailJS — COMMENTED OUT until launch to preserve free-tier quota (200/mo) ─
-
-// import emailjs from '@emailjs/browser';
-// const EJS_SERVICE_ID  = import.meta.env.VITE_EJS_SERVICE_ID;
-// const EJS_TEMPLATE_ID = import.meta.env.VITE_EJS_TEMPLATE_ID;
-// const EJS_PUBLIC_KEY  = import.meta.env.VITE_EJS_PUBLIC_KEY;
+import FormWaitlist from './FormWaitlist';
+import emailjs from '@emailjs/browser';
 
 export default function Waitlist({ waitlistRef }) {
+  const EJS_SERVICE_ID = import.meta.env.VITE_EJS_SERVICE_ID;
+  const EJS_TEMPLATE_ID = import.meta.env.VITE_EJS_TEMPLATE_ID;
+  const EJS_PUBLIC_KEY = import.meta.env.VITE_EJS_PUBLIC_KEY;
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [showModal, setShowModal] = useState(false);
 
   // 'success' = new signup | 'already' = email already stored in localStorage
   const [modalType, setModalType] = useState('success');
-  
+
   // Snapshot of submitted values — kept so modal shows them after form clears
   const [submitted, setSubmitted] = useState({ name: '', email: '' });
   const timerRef = useRef(null);
@@ -31,28 +29,29 @@ export default function Waitlist({ waitlistRef }) {
     setSubmitted(snap);
 
     const storedEmail = localStorage.getItem('wl_email');
+    const storedDatas = storedEmail ? JSON.parse(storedEmail) : [];
     const isAlready =
       storedEmail !== null &&
-      email.trim().toLowerCase() === storedEmail.toLowerCase();
-
+      storedDatas.some(
+        (item) => item.email.toLowerCase() === email.trim().toLowerCase()
+      );
     if (isAlready) {
-      // Email already registered — show "already joined" modal, skip sending
       setModalType('already');
     } else {
       // ── EmailJS send — uncomment at launch ──────────────────────────────
-      // emailjs.send(
-      //   EJS_SERVICE_ID,
-      //   EJS_TEMPLATE_ID,
-      //   {
-      //     title:   'New Waitlist Signup',
-      //     name:    snap.name,
-      //     email:   snap.email,
-      //     message: `${snap.name} joined the waitlist with email: ${snap.email}`,
-      //   },
-      //   EJS_PUBLIC_KEY
-      // );
+      emailjs.send(
+        EJS_SERVICE_ID,
+        EJS_TEMPLATE_ID,
+        {
+          title: 'New Waitlist Signup',
+          name: snap.name,
+          email: snap.email,
+          message: `${snap.name} joined the waitlist with email: ${snap.email}`,
+        },
+        EJS_PUBLIC_KEY
+      );
       // ────────────────────────────────────────────────────────────────────
-      localStorage.setItem('wl_email', email.trim().toLowerCase());
+      localStorage.setItem('wl_email', JSON.stringify([...storedDatas, snap]));
       setModalType('success');
     }
 

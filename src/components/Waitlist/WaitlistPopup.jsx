@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion as Motion } from 'framer-motion';
+  import emailjs from '@emailjs/browser';
 import WaitlistModal from './WaitlistModal';
 import './Waitlist.css';
 
@@ -19,10 +20,9 @@ export default function WaitlistPopup({
   const timerRef = useRef(null);
 
   // ── EmailJS — COMMENTED OUT until launch to preserve free-tier quota (200/mo) ─
-  // import emailjs from '@emailjs/browser';
-  // const EJS_SERVICE_ID = import.meta.env.VITE_EJS_SERVICE_ID;
-  // const EJS_TEMPLATE_ID = import.meta.env.VITE_EJS_TEMPLATE_ID;
-  // const EJS_PUBLIC_KEY = import.meta.env.VITE_EJS_PUBLIC_KEY;
+  const EJS_SERVICE_ID = import.meta.env.VITE_EJS_SERVICE_ID;
+  const EJS_TEMPLATE_ID = import.meta.env.VITE_EJS_TEMPLATE_ID;
+  const EJS_PUBLIC_KEY = import.meta.env.VITE_EJS_PUBLIC_KEY;
 
   const canSubmit = name.trim() !== '' && email.trim() !== '';
 
@@ -50,17 +50,17 @@ export default function WaitlistPopup({
       setStatusType('already');
     } else {
       // ── EmailJS send — uncomment at launch ──────────────────────────────
-      // emailjs.send(
-      //   EJS_SERVICE_ID,
-      //   EJS_TEMPLATE_ID,
-      //   {
-      //     title: 'New Waitlist Signup',
-      //     name: snap.name,
-      //     email: snap.email,
-      //     message: `${snap.name} joined the waitlist with email: ${snap.email}`,
-      //   },
-      //   EJS_PUBLIC_KEY
-      // );
+      emailjs.send(
+        EJS_SERVICE_ID,
+        EJS_TEMPLATE_ID,
+        {
+          title: 'New Waitlist Signup',
+          name: snap.name,
+          email: snap.email,
+          message: `${snap.name} joined the waitlist with email: ${snap.email}`,
+        },
+        EJS_PUBLIC_KEY
+      );
       // ────────────────────────────────────────────────────────────────────
       const updatedList = [...storedList, snap];
       localStorage.setItem(storageKey, JSON.stringify(updatedList));

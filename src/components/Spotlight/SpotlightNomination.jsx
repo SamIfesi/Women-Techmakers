@@ -84,7 +84,7 @@ export default function SpotlightNomination() {
 
   useEffect(() => {
     if (showStatusModal) {
-      timerRef.current = setTimeout(() => setShowStatusModal(false), 500000);
+      timerRef.current = setTimeout(() => setShowStatusModal(false), 5000);
     }
     return () => clearTimeout(timerRef.current);
   }, [showStatusModal]);

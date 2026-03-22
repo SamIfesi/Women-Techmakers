@@ -37,7 +37,12 @@ export default function NominationModal({
             exit={{ scale: 1, opacity: 0, y: -80 }}
             transition={{ type: 'spring', stiffness: 280, damping: 22 }}
           >
-            <div className="wl-modal-icon" aria-hidden="true">
+            <div
+              className={
+                isError ? 'wl-modal-icon wl-modal-icon-error' : 'wl-modal-icon'
+              }
+              aria-hidden="true"
+            >
               {isError ? <img src={err} alt="Error" /> : '✓'}
             </div>
 
@@ -45,7 +50,8 @@ export default function NominationModal({
               <>
                 <p className="wl-modal-text">Request Could Not Be Completed</p>
                 <p className="wl-modal-sub">
-                  Your request could not be completed at this time. Please try again later.
+                  Your request could not be completed at this time. Please try
+                  again later.
                 </p>
               </>
             ) : isAlready ? (
@@ -62,8 +68,8 @@ export default function NominationModal({
                 <p className="wl-modal-sub">
                   Thanks for your nomination.
                   <br />
-                  <strong>{name}</strong> has been added for the spotlight nomination for this{' '}
-                  <strong>{role}</strong>.
+                  <strong>{name}</strong> has been added for the spotlight
+                  nomination for this <strong>{role}</strong>.
                 </p>
               </>
             )}

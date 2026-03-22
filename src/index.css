@@ -15,6 +15,7 @@
   --light-bg: #f3f6ff;
   --light-text: #94A3B8;
   --accent-orange: #f97316;
+  --danger: rgba(248, 64, 64, 0.808);
 }
 *,
 *::before,

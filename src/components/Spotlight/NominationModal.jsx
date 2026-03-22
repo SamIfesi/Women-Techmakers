@@ -16,6 +16,7 @@ export default function NominationModal({
   type = 'success',
   name = '',
   role = '',
+  onClose,
 }) {
   const isAlready = type === 'already';
   const isError = type === 'error';
@@ -29,6 +30,7 @@ export default function NominationModal({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.35 }}
+          onClick={onClose}
         >
           <Motion.div
             className="wl-modal-card"
@@ -36,6 +38,7 @@ export default function NominationModal({
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 1, opacity: 0, y: -80 }}
             transition={{ type: 'spring', stiffness: 280, damping: 22 }}
+            onClick={(e) => e.stopPropagation()}
           >
             <div
               className={

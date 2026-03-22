@@ -89,6 +89,14 @@ export default function SpotlightNomination() {
     return () => clearTimeout(timerRef.current);
   }, [showStatusModal]);
 
+  const closeModel = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    setShowStatusModal(false);
+  };
+
   return (
     <section
       className="spotlight-nomination"
@@ -190,6 +198,7 @@ export default function SpotlightNomination() {
         type={statusType}
         name={submitted.name}
         role={submitted.role}
+        onClose={closeModel}
       />
     </section>
   );

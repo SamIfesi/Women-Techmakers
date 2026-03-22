@@ -40,7 +40,7 @@ export default function WaitlistModal({
             exit={{ scale: 1, opacity: 0, y: -80 }}
             transition={{ type: 'spring', stiffness: 280, damping: 22 }}
           >
-            <div className="wl-modal-icon" aria-hidden="true">
+            <div className={isError ? 'wl-modal-icon wl-modal-icon-error' : 'wl-modal-icon'} aria-hidden="true">
               {isError ? <img src={err} alt="Error" /> : '✓'}
             </div>
 

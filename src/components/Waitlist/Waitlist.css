@@ -212,6 +212,10 @@
   margin-bottom: 0.5rem;
 }
 
+.wl-modal-icon-error {
+  background: var(--danger);
+}
+
 .wl-modal-text {
   font-size: 1.15rem;
   font-weight: 700;

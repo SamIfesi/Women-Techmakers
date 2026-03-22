@@ -105,6 +105,14 @@ export default function WaitlistPopup({
     return undefined;
   }, [isFormOpen, showStatusModal]);
 
+  const closeStatusModal = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    setShowStatusModal(false);
+  };
+
   return (
     <>
       <button type="button" className={triggerClassName} onClick={openFormModal}>
@@ -188,6 +196,7 @@ export default function WaitlistPopup({
         type={statusType}
         name={submitted.name}
         email={submitted.email}
+        onClose={closeStatusModal}
       />
     </>
   );

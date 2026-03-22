@@ -19,6 +19,7 @@ export default function WaitlistModal({
   type = 'success',
   name = '',
   email = '',
+  onClose,
 }) {
   const isAlready = type === 'already';
   const isError = type === 'error';
@@ -32,6 +33,7 @@ export default function WaitlistModal({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.35 }}
+          onClick={onClose}
         >
           <Motion.div
             className="wl-modal-card"
@@ -39,8 +41,14 @@ export default function WaitlistModal({
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 1, opacity: 0, y: -80 }}
             transition={{ type: 'spring', stiffness: 280, damping: 22 }}
+            onClick={(e) => e.stopPropagation()}
           >
-            <div className={isError ? 'wl-modal-icon wl-modal-icon-error' : 'wl-modal-icon'} aria-hidden="true">
+            <div
+              className={
+                isError ? 'wl-modal-icon wl-modal-icon-error' : 'wl-modal-icon'
+              }
+              aria-hidden="true"
+            >
               {isError ? <img src={err} alt="Error" /> : '✓'}
             </div>
 
@@ -48,7 +56,8 @@ export default function WaitlistModal({
               <>
                 <p className="wl-modal-text">Request Could Not Be Completed</p>
                 <p className="wl-modal-sub">
-                  Your request could not be completed at this time. Please try again later.
+                  Your request could not be completed at this time. Please try
+                  again later.
                 </p>
               </>
             ) : isAlready ? (

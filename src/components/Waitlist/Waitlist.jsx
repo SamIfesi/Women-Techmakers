@@ -21,7 +21,8 @@ export default function Waitlist({ waitlistRef }) {
 
   // Button is only active when both fields have content and email is valid
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const canSubmit = name.trim() !== '' && email.trim() !== '' && EMAIL_REGEX.test(email.trim());
+  const canSubmit =
+    name.trim() !== '' && email.trim() !== '' && EMAIL_REGEX.test(email.trim());
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -56,7 +57,10 @@ export default function Waitlist({ waitlistRef }) {
           EJS_PUBLIC_KEY
         );
         // ────────────────────────────────────────────────────────────────────
-        localStorage.setItem('wl_email', JSON.stringify([...storedDatas, snap]));
+        localStorage.setItem(
+          'wl_email',
+          JSON.stringify([...storedDatas, snap])
+        );
       }
     } catch (error) {
       console.error('Waitlist submission failed:', error);
@@ -89,6 +93,14 @@ export default function Waitlist({ waitlistRef }) {
     console.info('One-time waitlist localStorage cleanup completed.');
   }, []);
 
+  const closeModel = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    setShowModal(false);
+  };
+
   return (
     <>
       <FormWaitlist
@@ -107,6 +119,7 @@ export default function Waitlist({ waitlistRef }) {
         type={modalType}
         name={submitted.name}
         email={submitted.email}
+        onClose={closeModel}
       />
     </>
   );

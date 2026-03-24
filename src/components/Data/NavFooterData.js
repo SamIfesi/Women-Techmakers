@@ -1,6 +1,7 @@
 export const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/About' },
+  { label: 'Download', path: '/Download' },
   // { label: 'Contributors', path: '/Contributors' },
   { label: 'IWD 2026', path: '/Iwd2026' },
   { label: 'Spotlight', path: '/Spotlight' },
@@ -27,6 +28,7 @@ export const footerData = {
     heading: 'Quick Links',
     links: [
       { label: 'About the Book', href: '/About' },
+      { label: 'Download Book', href: '/Download' },
       // { label: 'Contributors', href: '/Contributors' },
       { label: 'IWD 2026 Event', href: '/Iwd2026' },
       { label: 'Women Spotlight', href: '/Spotlight' },

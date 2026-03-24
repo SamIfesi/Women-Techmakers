@@ -3,9 +3,9 @@ export const contributor = {
   titleLine1: 'Our',
   titleLine2: 'Contributors',
   subtitle:
-    '12 women. 15 stories. Each one real, raw, and remarkable. These are the voices that make this book what it is.',
+    '15 women. 15 stories. Each one real, raw, and remarkable. These are the voices that make this book what it is.',
 
-  stat: {number: '12 Women', label: ' • 15 Stories • 1 Book'},
+  stat: {number: '15 Women', label: ' • 15 Stories • 1 Book'},
 };
 
 export const contributorCardsData = [

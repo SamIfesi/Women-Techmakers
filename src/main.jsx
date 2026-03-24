@@ -6,6 +6,7 @@ import './index.css';
 import App from './App.jsx';
 import About from './About.jsx';
 import Iwd2026 from './Iwd2026.jsx';
+import Download from './Download.jsx';
 import ContributorsPage from './Contributors.jsx';
 import Teams from './Teams.jsx';
 import Spotlight from './Spotlight.jsx';
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
         {/* <Route path="/Contributors" element={<ContributorsPage />} /> */}
         <Route path="/Teams" element={<Teams />} />
         <Route path="/Spotlight" element={<Spotlight />} />
+        <Route path="/Download" element={<Download />} />
       </Routes>
     </StrictMode>
   </BrowserRouter>

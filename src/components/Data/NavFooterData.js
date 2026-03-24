@@ -1,11 +1,11 @@
 export const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/About' },
-  { label: 'Download', path: '/Download' },
   // { label: 'Contributors', path: '/Contributors' },
   { label: 'IWD 2026', path: '/Iwd2026' },
   { label: 'Spotlight', path: '/Spotlight' },
   { label: 'Our Team', path: '/Teams' },
+  { label: 'Download', path: '/Download' },
 ];
 
 export const footerData = {

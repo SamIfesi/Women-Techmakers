@@ -1,0 +1,266 @@
+/* ============================================================
+   BOOK SHOWCASE — Mobile first (base styles target < 768px)
+   ============================================================ */
+
+.book-showcase {
+  background-color: var(--off-white);
+  padding: 3rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.book-showcase__header {
+  text-align: center;
+  max-width: 500px;
+}
+
+.book-showcase__heading {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 900;
+  color: var(--dark-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.book-showcase__description {
+  font-size: 1rem;
+  color: var(--dark-text);
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ── Book Covers ────────────────────────────────────────── */
+.book-showcase__covers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  align-items: center;
+}
+
+.book-showcase__cover-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.book-showcase__cover {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+}
+
+.book-showcase__cover-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(15, 30, 138, 0.15);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.book-showcase__cover-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(15, 30, 138, 0.25);
+}
+
+.book-showcase__cover-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--light-text);
+  margin: 0;
+}
+
+/* ── Download Section ───────────────────────────────────── */
+.book-showcase__download-section {
+  width: 100%;
+  max-width: 500px;
+  background: var(--light-blue);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.book-showcase__download-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.book-showcase__download-description {
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── CTA Buttons ────────────────────────────────────────── */
+.book-showcase__cta-group {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.book-showcase__download-btn,
+.book-showcase__learn-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: .85rem 1rem;
+  border-radius: 0.875rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.book-showcase__download-btn {
+  background-color: var(--brand-green);
+  color: var(--dark-text);
+}
+
+.book-showcase__download-btn:hover {
+  background-color: #00b970;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 212, 138, 0.3);
+}
+
+.book-showcase__learn-more-btn {
+  background-color: var(--light-green);
+  color: var(--dark-text);
+  border: 1px solid var(--brand-green);
+}
+
+.book-showcase__learn-more-btn:hover {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.book-showcase__btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Format Info ────────────────────────────────────────── */
+.book-showcase__format-info {
+  font-size: 0.8rem;
+  color: var(--light-text);
+  margin: 0.5rem 0 0;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.book-showcase__format-label {
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.book-showcase__format-divider {
+  color: var(--light-text);
+  margin: 0 0.5rem;
+}
+
+
+/* ============================================================
+   Tablet — 768px and up
+   ============================================================ */
+@media screen and (min-width: 768px) {
+  .book-showcase {
+    padding: 4rem 2.5rem;
+    gap: 3rem;
+  }
+
+  .book-showcase__covers {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 800px;
+  }
+
+  .book-showcase__cover-wrapper {
+    flex: 1;
+    max-width: 350px;
+  }
+
+  .book-showcase__cover-image {
+    max-width: 100%;
+  }
+
+  .book-showcase__download-section {
+    max-width: 600px;
+  }
+
+  .book-showcase__cta-group {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .book-showcase__download-btn,
+  .book-showcase__learn-more-btn {
+    flex: 1;
+  }
+
+  .book-showcase__format-info {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .book-showcase__details {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    gap: 1.5rem;
+  }
+}
+
+/* ============================================================
+   Desktop — 1024px and up
+   ============================================================ */
+@media screen and (min-width: 1024px) {
+  .book-showcase {
+    padding: 5rem 3rem;
+    gap: 3.5rem;
+  }
+
+  .book-showcase__heading {
+    font-size: 2.75rem;
+  }
+
+  .book-showcase__download-section {
+    padding: 2.5rem 2rem;
+  }
+}

@@ -1,10 +1,14 @@
 import FramerMotion from '../FramerMotion';
-import bookcover from '/assets/img/bookcover.png';
+import frontcover from '/assets/img/bookcover.png';
+import backcover from '/assets/img/bookbackcover.jpg';
+import download from '/assets/icons/download.svg';
+import WaitlistPopup from '../Waitlist/WaitlistPopup';
 import './BookShowcase.css';
 
+const LAUNCH_DATE = new Date(2026, 2, 27).getTime(); // Note: Months are 0-indexed
+const isBeforeLaunch = Date.now() < LAUNCH_DATE;
+
 export default function BookShowcase() {
-  // TODO: Replace with actual back cover image once uploaded
-  // const bookback = '/assets/img/bookback.png';
 
   return (
     <section className="book-showcase" aria-labelledby="book-showcase-heading">
@@ -24,7 +28,7 @@ export default function BookShowcase() {
         <FramerMotion delay={0.2} className="book-showcase__cover-wrapper">
           <div className="book-showcase__cover book-showcase__cover--front">
             <img
-              src={bookcover}
+              src={frontcover}
               alt="From the Margins to the Mainstream - Book Front Cover"
               className="book-showcase__cover-image"
             />
@@ -35,11 +39,11 @@ export default function BookShowcase() {
         {/* Back Cover - Placeholder for now */}
         <FramerMotion delay={0.3} className="book-showcase__cover-wrapper">
           <div className="book-showcase__cover book-showcase__cover--back">
-              <img
-                src={bookcover}
-                alt="From the Margins to the Mainstream - Book Back Cover"
-                className="book-showcase__cover-image"
-              />
+            <img
+              src={backcover}
+              alt="From the Margins to the Mainstream - Book Back Cover"
+              className="book-showcase__cover-image"
+            />
             <p className="book-showcase__cover-label">Back Cover</p>
           </div>
         </FramerMotion>
@@ -54,32 +58,51 @@ export default function BookShowcase() {
         </p>
 
         <div className="book-showcase__cta-group">
-          <a
-            href="#"
-            className="book-showcase__download-btn"
-            download="From-the-Margins-to-the-Mainstream.pdf"
-            aria-label="Download the book as PDF"
-          >
-            <img src="/assets/icons/download.svg" alt="Download icon" />
-            Download
-          </a>
-
-          <a
-            href="/About"
-            className="book-showcase__learn-more-btn"
-            aria-label="Learn more about the book"
-          >
-            Learn More
-          </a>
+          {isBeforeLaunch ? (
+            <>
+              <WaitlistPopup
+                triggerText="Download"
+                triggerClassName="book-showcase__download-btn"
+                title="Get Early Access"
+                subtitle="Join the waitlist to receive the digital copy immediately after launch on March 28, 2026"
+              />
+              <a
+                href="/About"
+                className="book-showcase__learn-more-btn"
+                aria-label="Learn more about the book"
+              >
+                Learn More
+              </a>
+            </>
+          ) : (
+            <>
+              <a
+                href="/From-the-Margins-to-the-Mainstream.pdf"
+                className="book-showcase__download-btn"
+                download="From-the-Margins-to-the-Mainstream.pdf"
+                aria-label="Download the book as PDF"
+              >
+                <img src={download} alt="Download icon" />
+                Download PDF
+              </a>
+              <a
+                href="/About"
+                className="book-showcase__learn-more-btn"
+                aria-label="Learn more about the book"
+              >
+                Learn More
+              </a>
+            </>
+          )}
         </div>
 
         <p className="book-showcase__format-info">
           <span className="book-showcase__format-label">Format:</span> PDF
           (Digital)
           <span className="book-showcase__format-divider">•</span>
-          <span className="book-showcase__format-label">Size:</span> 5MB
+          <span className="book-showcase__format-label">Size:</span> -MB
           <span className="book-showcase__format-divider">•</span>
-          <span className="book-showcase__format-label">Pages:</span> 128
+          <span className="book-showcase__format-label">Pages:</span> -
         </p>
       </FramerMotion>
     </section>

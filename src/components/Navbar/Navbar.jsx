@@ -1,11 +1,18 @@
-import { useState } from 'react';
-import { NavLink } from "react-router";
+import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router';
 import { navLinks } from '../Data/NavFooterData';
 import './Navbar.css';
 import logo from '/assets/img/WTM_Logo_White.png';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
 
   return (
     <nav className="navbar">
@@ -31,8 +38,12 @@ export default function Navbar() {
         role="list"
       >
         {navLinks.map((link) => (
-          <li key={link.path} >
-            <NavLink to={link.path} className={({isActive})=> isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+          <li key={link.path}>
+            <NavLink
+              to={link.path}
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
             </NavLink>
           </li>

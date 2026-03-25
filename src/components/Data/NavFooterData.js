@@ -5,7 +5,7 @@ export const navLinks = [
   { label: 'IWD 2026', path: '/Iwd2026' },
   { label: 'Spotlight', path: '/Spotlight' },
   { label: 'Our Team', path: '/Teams' },
-  { label: 'Download', path: '/Download' },
+  // { label: 'Download', path: '/Download' },
 ];
 
 export const footerData = {

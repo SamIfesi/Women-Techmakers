@@ -13,7 +13,20 @@
   gap: 1.25rem;
   margin-bottom: 1rem;
 }
-.chapters__link{
+
+/* Make framer motion wrappers stretch full height */
+.chapters__grid > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chapters__grid > div > .chapter-card {
+  height: 100%;
+  flex: 1;
+}
+
+.chapters__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,21 +36,22 @@
   font-size: .85rem;
   margin-top: 1rem;
 }
-.chapters__link-icon{
+
+.chapters__link-icon {
   width: .6rem;
   height: .6rem;
 }
 
-/* ── Tablet — 2 cols ────────────────────────────────────────── */
+/* ── Tablet — auto-fit ──────────────────────────────────────── */
 @media screen and (min-width: 768px) {
   .chapters {
     padding: 4.5rem 2.5rem;
-    gap: 3rem;
   }
 
   .chapters__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
+    align-items: stretch;
   }
 }
 
@@ -45,13 +59,13 @@
 @media screen and (min-width: 1024px) {
   .chapters {
     padding: 5.5rem 4rem;
-    gap: 3.5rem;
     max-width: 1200px;
     margin-inline: auto;
   }
 
   .chapters__grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.75rem;
+    align-items: stretch;
   }
 }

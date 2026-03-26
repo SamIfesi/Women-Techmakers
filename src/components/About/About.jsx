@@ -14,8 +14,8 @@ export default function About() {
 
       <div className="about__body">
         {/* Pull quote */}
-        <FramerMotion delay={0.2}>
-          <blockquote className="about__quote">
+        <FramerMotion delay={0.2} className="about__quote">
+          <blockquote>
             <p>{aboutSec.quote}</p>
             <p>{aboutSec.quote2}</p>
           </blockquote>

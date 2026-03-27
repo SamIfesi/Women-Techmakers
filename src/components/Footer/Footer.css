@@ -130,7 +130,7 @@
 }
 
 /* ── Desktop layout ───────────────────────────────────────── */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .footer {
     padding: 4rem 4rem 2.5rem;
   }

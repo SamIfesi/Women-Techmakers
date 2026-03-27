@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
 }
 
 /* ── Header ─────────────────────────────────────────────────── */
@@ -51,7 +52,7 @@
   height: 100%;
 }
 
-/* ── Tablet — 2 cols, bigger cards ─────────────────────────── */
+/* ── Tablet — 3 cols ────────────────────────────────────────── */
 @media screen and (min-width: 768px) {
   .contributors {
     padding: 4.5rem 2.5rem;
@@ -72,19 +73,19 @@
   }
 }
 
-/* ── Desktop — 3 cols ───────────────────────────────────────── */
+/* ── Desktop — 4 cols ───────────────────────────────────────── */
 @media screen and (min-width: 1024px) {
   .contributors {
     padding: 5.5rem 4rem;
     gap: 3.5rem;
-    max-width: 1200px;
-    margin-inline: auto;
   }
 
   .contributors__grid {
     grid-template-columns: repeat(4, minmax(220px, 1fr));
     gap: 1.75rem;
-    max-width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    width: 100%;
   }
 
   .contributors__title {

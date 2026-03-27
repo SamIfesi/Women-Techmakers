@@ -5,7 +5,7 @@ import download from '/assets/icons/download.svg';
 import WaitlistPopup from '../Waitlist/WaitlistPopup';
 import './BookShowcase.css';
 
-const LAUNCH_DATE = new Date(2026, 2, 27).getTime(); // Note: Months are 0-indexed
+const LAUNCH_DATE = new Date(2026, 2, 28).getTime(); // Note: Months are 0-indexed
 const isBeforeLaunch = Date.now() < LAUNCH_DATE;
 
 export default function BookShowcase() {

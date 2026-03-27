@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
+  /* ── Fonts ────────────────────────────────────────────────── */
   --font-coolvetica: 'Coolvetica', sans-serif;
   --font-fractul: 'Fractul', sans-serif;
   --font-inter: 'Inter', sans-serif;
 
+  /* ── Colors ───────────────────────────────────────────────── */
   --dark-navy: #0f1e8a;
   --primary-blue: #1a35c5;
   --brand-green: #00d48a;
@@ -16,6 +18,17 @@
   --light-text: #94A3B8;
   --accent-orange: #f97316;
   --danger: rgba(248, 64, 64, 0.808);
+
+  /* ── Responsive Breakpoints ───────────────────────────────── */
+  /* Note: Use with @media screen and (min-width: var(--breakpoint-*)) */
+  /* Standard breakpoints for mobile-first responsive design:
+     - Mobile: base styles (< 768px)
+     - Tablet: 768px and up
+     - Desktop: 1024px and up
+     - Container max-width: 1200px */
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --container-max-width: 1200px;
 }
 *,
 *::before,

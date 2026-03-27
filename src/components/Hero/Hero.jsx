@@ -22,29 +22,32 @@ export default function Hero({ onJoinWaitlist }) {
         </span>
         <span>Free Download</span>
       </FramerMotion>
-
-      <FramerMotion delay={0.6} className="hero__bookcover-wrap">
-        <img
-          src={bookcover}
-          alt="Book cover for From the Margins to the Mainstream"
-          className="hero__bookcover"
-        />
-      </FramerMotion>
-
-      <div className="hero__content">
-        {/* Heading */}
-        <FramerMotion delay={0.3} className='hero__intro-texts'>
-          <h1 className="hero__title">
-            From the <span className="hero__title--green">margins</span> to the{' '}
-            <span className="hero__title--green">mainstream</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="hero__subtitle">
-            Women who claimed their seats at the Table of Technology
-          </p>
+      <div className="hero__context-container">
+        <FramerMotion delay={0.6} className="hero__bookcover-wrap">
+          <img
+            src={bookcover}
+            alt="Book cover for From the Margins to the Mainstream"
+            className="hero__bookcover"
+          />
         </FramerMotion>
 
+        <div className="hero__content">
+          {/* Heading */}
+          <FramerMotion delay={0.3} className="hero__intro-texts">
+            <h1 className="hero__title">
+              From the <span className="hero__title--green">margins</span> to
+              the <span className="hero__title--green">mainstream</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="hero__subtitle">
+              Women who claimed their seats at the Table of Technology
+            </p>
+          </FramerMotion>
+        </div>
+      </div>
+
+      <div className="hero-context-text">
         {/* Stats */}
         <FramerMotion
           delay={0.4}

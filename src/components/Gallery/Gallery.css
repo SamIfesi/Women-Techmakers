@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  max-height: 75vh;
 }
 
 .gallery__title {
@@ -28,7 +27,9 @@
 
 /* ── Desktop ────────────────────────────────────────────── */
 @media screen and (min-width: 1024px) {
-
+  .gallery {
+    max-height: 80vh;
+  }
   .gallery__title {
     font-size: 2rem;
   }

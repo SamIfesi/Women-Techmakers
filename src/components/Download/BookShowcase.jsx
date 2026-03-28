@@ -84,7 +84,7 @@ export default function BookShowcase() {
                 aria-label="Download the book as PDF"
               >
                 <img src={download} alt="Download icon" />
-                Download PDF
+                Download
               </a>
               <a
                 href="/About"
@@ -101,9 +101,9 @@ export default function BookShowcase() {
           <span className="book-showcase__format-label">Format:</span> PDF
           (Digital)
           <span className="book-showcase__format-divider">•</span>
-          <span className="book-showcase__format-label">Size:</span> -MB
+          <span className="book-showcase__format-label">Size:</span> 1.5MB
           <span className="book-showcase__format-divider">•</span>
-          <span className="book-showcase__format-label">Pages:</span> -
+          <span className="book-showcase__format-label">Pages:</span> 61
         </p>
       </FramerMotion>
     </section>

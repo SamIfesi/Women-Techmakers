@@ -164,10 +164,52 @@
   font-weight: 700;
 }
 
-/* ── Tablet + ──────────────────────────────────────────────── */
+/* ── Tablet ────────────────────────────────────────────────── */
 @media screen and (min-width: 768px) {
   .waitlist-card {
     padding: 2.75rem 2.5rem 2.25rem;
+    max-width: 520px;
+  }
+
+  .waitlist-subtitle {
+    max-width: 36ch;
+  }
+}
+
+/* ── Desktop ───────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) {
+  .waitlist-section {
+    padding: 5rem 2rem;
+  }
+
+  .waitlist-card {
+    padding: 3rem 3.5rem 2.5rem;
+    border-radius: 2rem;
+    gap: 1.25rem;
+  }
+
+  .waitlist-title {
+    font-size: 2.25rem;
+  }
+
+  .waitlist-subtitle {
+    font-size: 1rem;
+    max-width: 44ch;
+  }
+
+  .waitlist-input {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+
+  .waitlist-btn {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .waitlist-footer {
+    font-size: 0.8rem;
   }
 }
 

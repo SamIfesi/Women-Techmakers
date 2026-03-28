@@ -3,6 +3,7 @@ import frontcover from '/assets/img/bookcover.png';
 import backcover from '/assets/img/bookbackcover.jpg';
 import download from '/assets/icons/download.svg';
 import WaitlistPopup from '../Waitlist/WaitlistPopup';
+import FMTMS from '/assets/pdf/From-the-Margins-to-the-Mainstream.pdf';
 import './BookShowcase.css';
 
 const LAUNCH_DATE = new Date(2026, 2, 28, 13, 0, 0).getTime(); // 1 PM - Note: Months are 0-indexed
@@ -77,9 +78,9 @@ export default function BookShowcase() {
           ) : (
             <>
               <a
-                href="/From-the-Margins-to-the-Mainstream.pdf"
+                href={FMTMS}
                 className="book-showcase__download-btn"
-                download="From-the-Margins-to-the-Mainstream.pdf"
+                download="FROM THE MARGINS TO THE MAINSTREAM.pdf"
                 aria-label="Download the book as PDF"
               >
                 <img src={download} alt="Download icon" />

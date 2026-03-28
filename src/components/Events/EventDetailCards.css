@@ -9,7 +9,6 @@
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
-  max-width: 480px;
   margin: 0 auto;
   padding: 3rem 1.25rem;
   font-family: var(--font-inter);
@@ -39,6 +38,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
 }
 
 .edc-main__row {
@@ -86,10 +86,10 @@
   background-color: var(--brand-green);
   color: var(--dark-navy);
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 800;
   padding: 1rem 1.5rem;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   text-decoration: none;
   letter-spacing: 0.01em;
   transition: opacity 0.3s ease;
@@ -104,6 +104,7 @@
 .edc-webinar {
   background-color: var(--light-blue);
   border-radius: 1.2rem;
+  border: 1px solid rgba(15, 30, 138, 0.1);
   padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
@@ -132,7 +133,7 @@
   font-weight: 800;
   color: var(--dark-navy);
   line-height: 1.2;
-  margin:.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .edc-webinar__subtitle {
@@ -147,6 +148,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
 }
 
 .edc-webinar__row {
@@ -187,10 +189,10 @@
   background-color: var(--dark-navy);
   color: var(--off-white);
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   padding: 1rem 1.5rem;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   text-decoration: none;
   letter-spacing: 0.01em;
   transition:
@@ -208,21 +210,22 @@
 
 @media screen and (min-width: 768px) {
   .edc {
-    max-width: 960px;
     flex-direction: row;
-    align-items: flex-start;
-    padding: 2rem;
+    align-items: stretch;
+    justify-content: center;
+    padding: 3rem;
+    gap: 2rem;
   }
 
   .edc-main,
   .edc-webinar {
-    flex: 1;
+    min-width: 26rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .edc {
-    gap: 2rem;
-    padding: 2.5rem 3rem;
+    gap: 3rem;
+    padding: 3rem 5rem;
   }
 }

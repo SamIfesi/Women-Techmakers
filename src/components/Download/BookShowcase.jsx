@@ -3,7 +3,7 @@ import frontcover from '/assets/img/bookcover.png';
 import backcover from '/assets/img/bookbackcover.jpg';
 import download from '/assets/icons/download.svg';
 import WaitlistPopup from '../Waitlist/WaitlistPopup';
-import FMTMS from '/assets/pdf/From-the-Margins-to-the-Mainstream.pdf';
+import FMTMS from '/assets/pdf/FROM THE MARGINS TO THE MAINSTREAM.pdf';
 import './BookShowcase.css';
 
 const LAUNCH_DATE = new Date(2026, 2, 28, 13, 0, 0).getTime(); // 1 PM - Note: Months are 0-indexed

@@ -6,7 +6,7 @@ import WaitlistPopup from '../Waitlist/WaitlistPopup';
 import FMTMS from '/assets/pdf/From-the-Margins-to-the-Mainstream.pdf';
 import './BookShowcase.css';
 
-const LAUNCH_DATE = new Date(2026, 2, 28, 7, 0, 0).getTime(); // 1 PM - Note: Months are 0-indexed
+const LAUNCH_DATE = new Date(2026, 2, 28, 13, 0, 0).getTime(); // 1 PM - Note: Months are 0-indexed
 const isBeforeLaunch = Date.now() < LAUNCH_DATE;
 
 export default function BookShowcase() {
@@ -101,9 +101,9 @@ export default function BookShowcase() {
           <span className="book-showcase__format-label">Format:</span> PDF
           (Digital)
           <span className="book-showcase__format-divider">•</span>
-          <span className="book-showcase__format-label">Size:</span> 1.5MB
+          <span className="book-showcase__format-label">Size:</span>1.5MB
           <span className="book-showcase__format-divider">•</span>
-          <span className="book-showcase__format-label">Pages:</span> 61
+          <span className="book-showcase__format-label">Pages:</span>61
         </p>
       </FramerMotion>
     </section>

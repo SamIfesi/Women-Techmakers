@@ -69,16 +69,12 @@
     padding: 2.5rem 2.5rem;
   }
 
-  .editor-note__open-quote {
-    font-size: 3.5rem;
-  }
-
   .editor-note__heading {
     font-size: 1.25rem;
   }
 
   .editor-note__quote {
-    font-size: 1.0625rem;
+    font-size: 1rem;
   }
 
   .editor-note__author-img {
@@ -101,7 +97,7 @@
   }
 
   .editor-note__open-quote {
-    font-size: 4rem;
+    margin-bottom: 1rem;
   }
 
   .editor-note__heading {

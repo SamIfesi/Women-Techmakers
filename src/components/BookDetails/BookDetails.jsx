@@ -38,6 +38,25 @@ export default function BookDetails() {
         ))}
       </div>
 
+      <FramerMotion className='cta-container' delay={bookDetails.details.length * 0.1 + 0.1}>
+        {isBeforeLaunch ? (
+          <WaitlistPopup
+            triggerText={bookDetails.cta.text}
+            triggerClassName="book-details__cta"
+          />
+        ) : (
+          <a
+            href={FMTMS}
+            className="book-details__download-btn"
+            download="FROM THE MARGINS TO THE MAINSTREAM.pdf"
+            aria-label="Download the book as PDF"
+          >
+            <img src={download} alt="Download icon" />
+            Download BOOK
+          </a>
+        )}
+      </FramerMotion>
+
       {isBeforeLaunch ? (
         <FramerMotion
           className="cta-container"

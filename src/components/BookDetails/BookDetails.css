@@ -91,6 +91,32 @@
   opacity: 0.88;
 }
 
+.book-details__download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: .85rem 1rem;
+  border-radius: 0.875rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 28rem;
+  width: 100%;
+  background-color: var(--brand-green);
+  color: var(--dark-text);
+  transition: opacity 0.2s ease;
+}
+.book-details__download-btn:hover {
+  opacity: 0.88;
+}
+
 /* ============================================================
    Tablet — 768px and up
    ============================================================ */

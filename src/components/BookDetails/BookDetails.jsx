@@ -56,33 +56,6 @@ export default function BookDetails() {
           </a>
         )}
       </FramerMotion>
-
-      {isBeforeLaunch ? (
-        <FramerMotion
-          className="cta-container"
-          delay={bookDetails.details.length * 0.1 + 0.1}
-        >
-          <WaitlistPopup
-            triggerText={bookDetails.cta.text}
-            triggerClassName="book-details__cta"
-          />
-        </FramerMotion>
-      ) : (
-        <FramerMotion
-          className="cta-container"
-          delay={bookDetails.details.length * 0.1 + 0.1}
-        >
-          <a
-            href={FMTMS}
-            className="book-details__download-btn"
-            download="FROM THE MARGINS TO THE MAINSTREAM.pdf"
-            aria-label="Download the book as PDF"
-          >
-            <img src={download} alt="Download icon" />
-            Download BOOK
-          </a>
-        </FramerMotion>
-      )}
     </section>
   );
 }

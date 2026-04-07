@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: .7rem;
   padding: 1.2rem;
   max-width: 44rem;
   margin: 0 auto;
@@ -43,7 +43,6 @@
   font-weight: 800;
   color: var(--mid-text);
   letter-spacing: 0.02em;
-  margin: 0;
 }
 
 .download-banner__subtitle {
@@ -51,28 +50,4 @@
   font-weight: 400;
   color: var(--mid-text);
   opacity: 0.85;
-  margin: 0;
-}
-
-/* ── Tablet ───────────────────────────────────────────────── */
-@media screen and (min-width: 768px) {
-  .download-banner__content {
-    padding: 1.75rem 2.5rem;
-    gap: 1.25rem;
-  }
-
-  .download-banner__title {
-    font-size: 1.125rem;
-  }
-
-  .download-banner__subtitle {
-    font-size: 0.9375rem;
-  }
-}
-
-/* ── Desktop ──────────────────────────────────────────────── */
-@media screen and (min-width: 1024px) {
-  .download-banner__content {
-    padding: 2rem 4rem;
-  }
 }

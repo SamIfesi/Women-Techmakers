@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion as Motion, useInView } from 'framer-motion';
 
 const FramerMotion = ({
   children,
@@ -11,7 +11,7 @@ const FramerMotion = ({
   const isInView = useInView(ref, { once: true });
 
   return (
-    <motion.div
+    <Motion.div
       ref={ref}
       className={className}
       initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ const FramerMotion = ({
       transition={{ duration, delay, ease: 'easeOut' }}
     >
       {children}
-    </motion.div>
+    </Motion.div>
   );
 };
 

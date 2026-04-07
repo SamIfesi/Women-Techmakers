@@ -4,7 +4,7 @@ import './DownloadBanner.css';
 
 export default function DownloadBanner({ onComplete }) {
   useEffect(() => {
-    const timer = setTimeout(onComplete, 500000);
+    const timer = setTimeout(onComplete, 5000);
     return () => clearTimeout(timer);
   }, [onComplete]);
 

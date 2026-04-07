@@ -1,0 +1,78 @@
+/* ============================================================
+   DOWNLOAD BANNER — Success notification
+   ============================================================ */
+
+.download-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--light-green);
+  border: var(--brand-green) 2px solid;
+  z-index: 1000;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-fractul);
+}
+
+.download-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.download-banner__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+}
+
+.download-banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.download-banner__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--mid-text);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.download-banner__subtitle {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--mid-text);
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ── Tablet ───────────────────────────────────────────────── */
+@media screen and (min-width: 768px) {
+  .download-banner__content {
+    padding: 1.75rem 2.5rem;
+    gap: 1.25rem;
+  }
+
+  .download-banner__title {
+    font-size: 1.125rem;
+  }
+
+  .download-banner__subtitle {
+    font-size: 0.9375rem;
+  }
+}
+
+/* ── Desktop ──────────────────────────────────────────────── */
+@media screen and (min-width: 1024px) {
+  .download-banner__content {
+    padding: 2rem 4rem;
+  }
+}

@@ -61,9 +61,9 @@ export default function BookDetails() {
           />
         ) : (
           <a
-            // href={FMTMS}
+            href={FMTMS}
             className="book-details__download-btn"
-            // download="FROM THE MARGINS TO THE MAINSTREAM.pdf"
+            download="FROM THE MARGINS TO THE MAINSTREAM.pdf"
             aria-label="Download the book as PDF"
             onClick={handleDownloadClick}
           >

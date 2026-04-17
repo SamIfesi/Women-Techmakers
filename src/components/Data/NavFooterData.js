@@ -40,16 +40,24 @@ export const footerData = {
     heading: 'Join Us',
     links: [
       {
-        label: 'Join our WhatsApp Community',
+        label: 'Join NSUKKA WhatsApp Community',
         href: 'https://chat.whatsapp.com/FcayzKdGeUyJtCVk8IeD4X',
       },
       {
-        label: 'Register for IWD 2026 (Free)',
-        href: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/',
+        label: 'Join ENUGU WhatsApp Community',
+        href: 'https://chat.whatsapp.com/Ey1yVZflbnLKebAr1MjzLv?mode=gi_t',
       },
       {
         label: 'Join the Pre-Event Webinar',
         href: 'https://luma.com/5vppqueh',
+      },
+      {
+        label: 'Register for IWD-NSUKKA 2026',
+        href: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/',
+      },
+      {
+        label: 'Register for IWD-Enugu  2026',
+        href: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-breaking-the-pattern-international-womens-day-enugu-2026/',
       },
     ],
   },

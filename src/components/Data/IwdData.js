@@ -94,3 +94,17 @@ export const webinarCard = {
     link: 'https://luma.com/5vppqueh',
   },
 };
+
+export const enuguEvent = {
+  heading: 'ENUGU IWD EVENT',
+  rows: [
+    { label: 'Date', value: 'Saturday, 18th April 2026' },
+    { label: 'Venue', value: 'Universal Hotel, Independence layout, Enugu' },
+    { label: 'Capacity', value: '180 participants' },
+    { label: 'Cost', value: 'FREE', highlight: true },
+  ],
+  cta: {
+    text: 'Register for IWD-ENUGU',
+    link: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-breaking-the-pattern-international-womens-day-enugu-2026/',
+  },
+};

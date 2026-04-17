@@ -137,7 +137,7 @@ export const contributorsData = {
 
 export const eventsData = {
   section: {
-    title: 'Two Events, One March To Remember',
+    title: 'Three Events, One IWD To Remember',
     description:
       'The book launches at our IWD event in Nsukka, but you can join us online first',
   },

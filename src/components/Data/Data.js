@@ -4,7 +4,7 @@ export const aboutSec = {
   quote2: 'They walked in anyway....',
   text: 'From the Margins to the Mainstream is a collection of true stories — told by women who navigated bias, made radical career pivots, built businesses from nothing, mentored the next generation, and rose to lead in technology.',
   text2:
-    'Rooted in Africa and reaching across the globe, these twelve stories celebrate the women who refused to accept that tech was not for them. Their journeys are honest, inspiring, and transformative — not just for the women who lived them, but for every reader who picks up this book.',
+    'Rooted in Africa and reaching across the globe, these fifteen stories celebrate the women who refused to accept that tech was not for them. Their journeys are honest, inspiring, and transformative — not just for the women who lived them, but for every reader who picks up this book.',
 };
 
 export const chapters = [
@@ -55,7 +55,7 @@ export const chapters = [
 export const contributorsData = {
   title: 'Meet The Contributors',
   description:
-    'Twelve women, twelve stories. One book that would not exist without their courage to tell the truth',
+    'Fifteen women, fifteen stories. One book that would not exist without their courage to tell the truth',
   contributors: [
     {
       name: 'Patricia Oko',
@@ -160,6 +160,15 @@ export const eventsData = {
       time: '10:00AM GMT+1',
       link: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/',
       image: '/assets/img/flyer-2.png',
+    },
+    {
+      title: 'Breaking the Pattern - IWD Enugu',
+      type: 'Virtual/Physical Session',
+      location: 'Universal Hotel Independence Layout',
+      date: '18th April 2026',
+      time: '09:00AM GMT+1',
+      link: 'https://gdg.community.dev/events/details/google-gdg-enugu-presents-breaking-the-pattern-international-womens-day-enugu-2026/',
+      image: '/assets/img/flyer-3.jpg',
     },
   ],
 };

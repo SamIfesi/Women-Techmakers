@@ -20,7 +20,7 @@ export const bookStory = {
         before: 'Edited and curated by ',
         bold: 'Patricia Oko',
         after:
-          ', the book brings together 12 contributors from across the technology landscape — data engineers, researchers, QA engineers, founders, and more — each sharing their honest, unfiltered experience.',
+          ', the book brings together 15 contributors from across the technology landscape — data engineers, researchers, QA engineers, founders, and more — each sharing their honest, unfiltered experience.',
       },
     ],
   },
@@ -37,7 +37,7 @@ export const editorNote = {
 
 export const whatsInside = {
   heading: "What's Inside",
-  subheading: 'Six chapters, six themes, twelve voices',
+  subheading: 'Six chapters, six themes, fifteen voices',
   chapters: [
     {
       number: 1,

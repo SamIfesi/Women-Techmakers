@@ -31,6 +31,7 @@
   font-weight: 800;
   color: var(--off-white);
   letter-spacing: 0.02em;
+  font-family: var(--font-fractul);
 }
 
 /* rows */

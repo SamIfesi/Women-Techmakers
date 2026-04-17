@@ -1,5 +1,5 @@
 import FramerMotion from '../FramerMotion';
-import { mainEvent, webinarCard } from '../Data/IwdData';
+import { mainEvent, webinarCard, enuguEvent } from '../Data/IwdData';
 import './EventDetailCards.css';
 import lightening from '/assets/icons/web-lightening.svg';
 
@@ -39,7 +39,7 @@ export default function EventDetailCards() {
       </FramerMotion>
 
       {/* ── Pre-Event Webinar Card ───────────────────────────── */}
-      <FramerMotion className="edc-webinar" delay={0.3}>
+      <FramerMotion className="edc-webinar" delay={0.2}>
         <div>
           <div className="edc-webinar__badge">
             <img src={lightening} alt="" />
@@ -71,6 +71,38 @@ export default function EventDetailCards() {
           rel="noopener noreferrer"
         >
           {webinarCard.cta.text}
+        </a>
+      </FramerMotion>
+
+      {/* Enugu Event Card */}
+      <FramerMotion className="edc-main" delay={0.1}>
+        <h2 className="edc-main__heading">{enuguEvent.heading}</h2>
+
+        <div className="edc-main__rows">
+          {enuguEvent.rows.map((row, i) => (
+            <div key={i} className="edc-main__row">
+              <div className="edc-main__row-inner">
+                <span className="edc-main__label">{row.label}</span>
+                <span
+                  className={`edc-main__value${row.highlight ? ' edc-main__value--free' : ''}`}
+                >
+                  {row.value}
+                </span>
+              </div>
+              {i < enuguEvent.rows.length - 1 && (
+                <hr className="edc-main__divider" />
+              )}
+            </div>
+          ))}
+        </div>
+
+        <a
+          href={enuguEvent.cta.link}
+          className="edc-main__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {enuguEvent.cta.text}
         </a>
       </FramerMotion>
     </section>

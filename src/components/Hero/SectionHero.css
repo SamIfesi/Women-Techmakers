@@ -99,7 +99,7 @@
   .section-hero {
     padding: 6rem 5rem 6.5rem;
     gap: 1.75rem;
-    max-width: 56rem;
+    /* max-width: 56rem; */
   }
 
   .section-hero__eyebrow {

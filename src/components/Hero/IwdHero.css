@@ -79,27 +79,38 @@
 }
 
 /* ── CTA button ────────────────────────────────────────────── */
+.iwd-hero__cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
 .iwd-hero__cta {
   display: inline-block;
   margin-top: 0.75rem;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1rem;
   background-color: var(--brand-green);
   color: var(--dark-navy);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 800;
-  border-radius: 50px;
+  border-radius: 0.5rem;
   text-decoration: none;
   transition:
     background-color 0.2s ease,
     transform 0.15s ease;
-  white-space: nowrap;
+  white-space: wrap;
+  text-align: center;
+}
+.iwd-hero__cta--enugu {
+  background-color: var(--off-white);
+  color: var(--dark-navy);
 }
 
-.iwd-hero__cta:hover {
-  background-color: #00bc7a;
-}
-
-.iwd-hero__cta:active {
+.iwd-hero__cta:hover,
+.iwd-hero__cta:active,
+.iwd-hero__cta:focus {
+  background-color: #00bc7a83;
   transform: scale(0.97);
 }
 

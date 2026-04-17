@@ -61,14 +61,22 @@ export default function IwdHero() {
       </FramerMotion>
 
       {/* CTA */}
-      <FramerMotion delay={0.5}>
+      <FramerMotion delay={0.5} className="iwd-hero__cta-wrapper">
         <Link
           to="https://gdg.community.dev/events/details/google-gdg-enugu-presents-break-the-pattern-women-shaping-the-future-of-tech-international-womens-day-nsukka-2026/"
           className="iwd-hero__cta"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Register for IWD 2026 &mdash; Free
+          Register for IWD 2026-NSUKKA
+        </Link>
+        <Link
+          to="https://gdg.community.dev/events/details/google-gdg-enugu-presents-breaking-the-pattern-international-womens-day-enugu-2026/"
+          className="iwd-hero__cta iwd-hero__cta--enugu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Register for IWD 2026-ENUGU
         </Link>
       </FramerMotion>
     </section>

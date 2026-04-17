@@ -5,7 +5,7 @@ import About from './components/About/About';
 import Chapters from './components/Chapters/Chapters';
 import Contributors from './components/Contributors/Contributors';
 import Events from './components/Events/Events';
-import Waitlist from './components/Waitlist/Waitlist';
+// import Waitlist from './components/Waitlist/Waitlist';
 import Footer from './components/Footer/Footer';
 
 export default function App() {
@@ -25,7 +25,7 @@ export default function App() {
         <Chapters />
         <Contributors />
         <Events />
-        <Waitlist waitlistRef={waitlistRef} />
+        {/* <Waitlist waitlistRef={waitlistRef} /> */}
       </main>
       <Footer />
     </>
